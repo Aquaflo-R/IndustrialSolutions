@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import { useState } from "react";
 import { HashRouter, Route, Routes } from "react-router";
 import About from "./pages/About";
-import Products from "./pages/Products";
+import Products from "./pages/products/Products";
 import Industries from "./pages/Industries";
 import Process from "./pages/Process";
 import Infrastructure from "./pages/Infrastructure";
