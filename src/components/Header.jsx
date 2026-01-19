@@ -13,9 +13,9 @@ function Header() {
             initial={{ y: -60, opacity: 0}}
             animate={{ y: 0, opacity: 1}}
             transition={{ duration: 0.5}}
-            className="fixed top-0 left-0 w-full bg-white z-50 border-b-2"
+            className="fixed top-0 left-0 w-full bg-bg-primary/40 z-50 border-b-2"
         >
-            <div className=" mx-auto px-10 py-4 bg-white/70 flex rounded-full justify-between items-center">
+            <div className=" mx-auto px-10 py-4 flex justify-between items-center">
                 {/* Logo */}
                 {/* <h1 className="text-xl font-bold text-indigo-600">Brand</h1> */}
                 <Link to="/" className="flex items-center">
