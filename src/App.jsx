@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import { useState } from "react";
+
 import { HashRouter, Route, Routes } from "react-router";
 import About from "./pages/About";
 import Products from "./pages/products/Products";
@@ -7,7 +7,7 @@ import Industries from "./pages/Industries";
 import Process from "./pages/Process";
 import Infrastructure from "./pages/Infrastructure";
 import CaseStudies from "./pages/CaseStudies";
-import { Contact } from "lucide-react";
+import Contact from "./pages/Contact";
 import Header from "./components/Header";
 function App() {
   return (

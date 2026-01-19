@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand / Primary */
+  --color-primary: #0B2B26;        /* Deep Navy / Brand core */
+
+  /* Secondary */
+  --color-secondary: #163832;      /* Dark Teal */
+  --color-secondary-dark: #235347; /* Muted Blue-Green */
+
+  /* Accent */
+  --color-accent: #BEB69B;         /* Soft Sand / Highlight */
+
+  /* Backgrounds */
+  --color-bg-primary: #DAF1DE;     /* Light Sage / Page background */
+
+  --font-primary: "Raleway", sans-serif;
+  --font-secondary: "Lato", sans-serif;
+}
+
+/* Primary (#0B2B26) → Header, main buttons
+
+Secondary (#163832, #235347) → Sections, cards, footer
+
+Accent (#BEB69B) → CTAs, highlights, icons
+
+Background (#DAF1DE) → Page background, light sections */
