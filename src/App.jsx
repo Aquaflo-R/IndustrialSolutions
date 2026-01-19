@@ -9,6 +9,7 @@ import Infrastructure from "./pages/Infrastructure";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
+import Productdetails from "./pages/products/Productdetails";
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
             <Route path="/infrastructure" element={<Infrastructure />} />
             <Route path="/caseStudies" element={<CaseStudies />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/productsdetails" element={<Productdetails />} />
           </Routes>
         </HashRouter>
       </div>
