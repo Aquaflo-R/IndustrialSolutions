@@ -4,9 +4,14 @@ import renewable from "/icons/renewable-energy.png";
 import energy from "/icons/energy-care.png";
 import solarinst from "/icons/solarinstallation.png";
 import maintenance from "/icons/maintenance.png";
+import Residental from "/icons/ResidentialSolarSystems.png";
+import Commercial from "/icons/CommercialInstallations.png";
+import Industrial from "/icons/IndustrialFacilities.png";
+import Utility from "/icons/UtilityScaleSolarPlants.png";
+import solarcta from "/icons/solarcta.png";
 const Productdetails = () => {
   return (
-    <div id="main" className="p-2 mt-20">
+    <div id="main" className="p-2 mt-20 scroll-smooth">
       <div
         id="section1"
         className="h-[25vw] w-full bg-[url(https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center relative z-5"
@@ -148,12 +153,21 @@ const Productdetails = () => {
             <div id="smallpoints" className="flex flex-wrap  gap-10 mt-5">
               <div className="w-[45%] border p-2 border-primary rounded-xl">
                 <h1 className="font-primary text-xl font-medium text-primary">
-                  System Applications
+                  Applications & Usage
                 </h1>
                 <p className="font-secondary text-pretty text-secondary">
-                  Designed for use across residential, commercial, and
-                  industrial solar installations, ensuring stable and efficient
-                  power conversion in diverse environments.
+                  Designed for residential, commercial, and industrial solar
+                  installations, delivering reliable power conversion across
+                  varied operating environments.
+                </p>
+              </div>
+              <div className="w-[45%] border p-2 border-primary rounded-xl">
+                <h1 className="font-primary text-xl font-medium text-primary">
+                  Operational Stability
+                </h1>
+                <p className="font-secondary text-pretty text-secondary">
+                  Ensures consistent output during voltage fluctuations,
+                  temperature changes, and variable solar conditions.
                 </p>
               </div>
               <div className="w-[45%] border p-2 border-primary rounded-xl">
@@ -168,22 +182,12 @@ const Productdetails = () => {
               </div>
               <div className="w-[45%] border p-2 border-primary rounded-xl">
                 <h1 className="font-primary text-xl font-medium text-primary">
-                  System Applications
+                  Long-Term Reliability
                 </h1>
                 <p className="font-secondary text-pretty text-secondary">
-                  Designed for use across residential, commercial, and
-                  industrial solar installations, ensuring stable and efficient
-                  power conversion in diverse environments.
-                </p>
-              </div>
-              <div className="w-[45%] border p-2 border-primary rounded-xl">
-                <h1 className="font-primary text-xl font-medium text-primary">
-                  System Applications
-                </h1>
-                <p className="font-secondary text-pretty text-secondary">
-                  Designed for use across residential, commercial, and
-                  industrial solar installations, ensuring stable and efficient
-                  power conversion in diverse environments.
+                  Built with durable components and intelligent thermal
+                  management for sustained performance and extended service
+                  life.
                 </p>
               </div>
             </div>
@@ -197,6 +201,105 @@ const Productdetails = () => {
                 className="h-full w-full object-cover rounded-2xl"
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="section4"
+        className="bg-secondary text-white h-screen flex flex-col items-center justify-center my-10"
+      >
+        <div className="p-5 ">
+          <h1 className="font-primary text-5xl font-bold  ">
+            Solar Solutions for Every Need
+          </h1>
+          <p className="font-secondary text-xl font-medium mt-2">
+            Residential, Commercial, Industrial and Utility-Scale Solar Plants.
+          </p>
+          <div className="flex gap-5 mt-10">
+            <div className="w-[25%] h-[400px]  bg-amber-50 text-black rounded-4xl overflow-hidden">
+              <img
+                src={Residental}
+                alt=""
+                className="h-[80%] object-cover rounded-b-4xl"
+              />
+              <h1 className="font-primary font-bold text-2xl  px-5 py-2">
+                Residential Solar Systems
+              </h1>
+            </div>
+            <div className="w-[25%] h-[400px]  bg-amber-50 text-black rounded-4xl overflow-hidden">
+              <img
+                src={Commercial}
+                alt=""
+                className="h-[80%] object-cover rounded-b-4xl"
+              />
+              <h1 className="font-primary font-bold text-2xl  px-5 py-2">
+                Commercial Installations
+              </h1>
+            </div>
+            <div className="w-[25%] h-[400px]  bg-amber-50 text-black rounded-4xl overflow-hidden">
+              <img
+                src={Industrial}
+                alt=""
+                className="h-[80%] object-cover rounded-b-4xl"
+              />
+              <h1 className="font-primary font-bold text-2xl  px-5 py-2">
+                Industrial Facilities
+              </h1>
+            </div>
+            <div className="w-[25%] h-[400px]  bg-amber-50 text-black rounded-4xl overflow-hidden">
+              <img
+                src={Utility}
+                alt=""
+                className="h-[80%] object-cover rounded-b-4xl"
+              />
+              <h1 className="font-primary font-bold text-2xl  px-5 py-2">
+                Utility-Scale Solar Plants
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section
+        className="
+        relative
+    h-[80vh] 
+    w-screen 
+    bg-fixed 
+    bg-center 
+    bg-cover 
+    flex 
+    items-center 
+    justify-center
+  "
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        }}
+      >
+        <div className="absolute top-0 left-0 h-full w-full bg-black/20"></div>
+      </section>
+
+      <div
+        id="section6"
+        className="h-[70vh] w-screen flex items-center justify-center"
+      >
+        <div className="bg-primary rounded-4xl h-[50vh] w-[180vh] text-white flex items-center justify-around ">
+          <div className="w-[80vh] ">
+            <h1 className="font-primary text-3xl">
+              Power your solar installation with a high-performance inverter.
+            </h1>
+            <p className="font-secondary text-xl font-light mt-2">
+              Get expert guidance, technical support, and customized solutions
+              for your project.
+            </p>
+            <button className="bg-bg-primary text-black font-primary py-2 px-10 rounded-4xl mt-5">
+              Get in Touch
+            </button>
+          </div>
+          <div className="w-[70vh]">
+            <img src={solarcta} alt="" className=" h-[50vh] object-cover" />
           </div>
         </div>
       </div>
