@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden  h-150 content-center bg-[url('images/solarheroimg.png')] bg-cover bg-center">
+      <section className="relative overflow-hidden  h-150 content-center bg-[url('/images/solarheroimg.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[#100e12] opacity-70 z-0"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-20">
           <motion.h1
@@ -60,12 +60,12 @@ const Home = () => {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: easeInOut }}
-            className="absolute top-30 right-24 w-26 h-14 rounded-full bg-[url('images/hero4.png')] bg-cover bg-center ">
+            className="absolute top-30 right-24 w-26 h-14 rounded-full bg-[url('/images/hero4.png')] bg-cover bg-center ">
           </motion.div>
           <motion.div
             animate={{ x: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: easeInOut }} 
-            className="absolute bottom-10 left-32 w-20 h-20 rounded-full bg-[url('images/hero1.png')] bg-cover bg-center ">
+            className="absolute bottom-10 left-32 w-20 h-20 rounded-full bg-[url('/images/hero1.png')] bg-cover bg-center ">
           </motion.div>
           {/* <motion.div
             animate={{ x: [0, -15, 0] }}
