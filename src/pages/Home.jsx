@@ -40,7 +40,7 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-full font-primary bg-[#DAF1DE] hover:bg-[#235347] shadow-2xl text-black 
                   hover:text-white font-semibold inline-block">
-                Request a Quote
+                Request Quote
             </MotionLink>
             <MotionLink to="/" whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
