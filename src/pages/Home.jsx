@@ -80,7 +80,7 @@ const Home = () => {
         {/* image div */}
         <div className="relative w-full max-w-xl">
           {/* main image */}
-          <img src="images/habout1.jpg" alt="about" className="w-full rounded-3xl object-cover"/>
+          <img src="images/habout1.jpg" alt="about" className="w-full px-2 rounded-3xl object-cover"/>
           {/* experience badge */}
           <div className="absolute bottom-8 left-10 bg-[#163832] text-white w-40 h-28 rounded-2xl flex flex-col
             items-center justify-center shadow-lg">
@@ -88,8 +88,8 @@ const Home = () => {
               <p className="text-sm mt-1">Years of Experience</p>
           </div>
           {/* second image */}
-          <img src="images/habout2.jpg" alt="Solarpanelhouse" className="absolute -bottom-20 -right-8 w-[40%]
-            rounded-3xl object-cover shadow-xl border-4 border-white" />
+          <img src="images/habout2.jpg" alt="Solarpanelhouse" className="absolute -bottom-20 -right-0 w-[40%]
+           md:-right-8 rounded-3xl object-cover shadow-xl border-4 border-white" />
         </div>
 
         {/* text div */}
