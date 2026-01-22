@@ -1,11 +1,58 @@
-import React from "react";
 import { easeInOut, motion } from "framer-motion";
 import { Link } from "react-router";
-import { Sun } from "lucide-react";
+import { Sun, ArrowUpRight, Users, MessageSquare, Puzzle, Building2 } from "lucide-react";
 import AnimatedHeading from "../components/Animatedheading";
+
 
 const Home = () => {
   const MotionLink = motion(Link);
+  // products categories
+  const productcategory = [
+    {
+      id: 1, image: "images/solarinverter.png", title: "Solar Inverters", link: "/products/solar-panels",
+    },
+    {
+      id: 2, image: "images/spanels.png", title: "Solar Panels", link: "/products/solar-panels",
+    },
+    {
+      id: 3, image: "images/energystorage.png", title: "Energy Storage System", link: "/products/solar-panels",
+    },
+    {
+      id: 4, image: "images/solarcontrol.png", title: "Solar Monitoring & Control", link: "/products/solar-panels",
+    },
+  ]
+  // industries we serve
+  const industries = [
+    { title: "Automotive", image: "images/automobile.png" },
+    { title: "Pharmaceutical", image: "images/pharma.png" },
+    { title: "Energy & Utilities", image: "images/energyutility.png" },
+    { title: "Manufacturing", image: "images/manufacturing.png" },
+    { title: "Logistics & Warehousing", image: "images/logistic.png" },
+    { title: "Oil & Gas", image: "images/oilgas.png" },
+  ];
+  // manufacturing process
+  const steps = [
+    {
+      title: "MEET",
+      desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accuntium.",
+      icon: Users,
+    },
+    {
+      title: "DISCUSSION",
+      desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accuntium.",
+      icon: MessageSquare,
+    },
+    {
+      title: "IDEAL",
+      desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accuntium.",
+      icon: Puzzle,
+    },
+    {
+      title: "CONSTRUCT",
+      desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accuntium.",
+      icon: Building2,
+    },
+  ];
   return (
     <main>
       {/* Hero Section */}
@@ -44,7 +91,7 @@ const Home = () => {
             </MotionLink>
             <MotionLink to="/" whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 rounded-full font-primary bg-[#235347] hover:bg-[#DAF1DE] text-white 
+              className="px-8 py-3 rounded-full font-primary bg-[#235347] hover:bg-[#DAF1DE] shadow-2xl text-white 
                   hover:text-black font-semibold inline-block">
                 View Products
             </MotionLink>
@@ -76,7 +123,8 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="max-w-7xl mx-auto px-6 py-26 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 pt-6 pb-22 grid md:grid-cols-2 gap-16 items-center">
         {/* image div */}
         <div className="relative w-full max-w-xl">
           {/* main image */}
@@ -95,7 +143,8 @@ const Home = () => {
         {/* text div */}
         <div>
           <div className="flex gap-2 items-center">
-            <Sun strokeWidth={3} className="text-[#235347]"/><h2 className="text-3xl font-primary font-bold text-[#235347]">About Us</h2>
+            <Sun strokeWidth={3} size={20} className="text-[#235347]"/>
+            <h2 className="text-2xl font-primary font-bold text-[#235347]">About Us</h2>
           </div>
           <AnimatedHeading text="Smart Energy Solutions for a | Greener Tomorrow." 
               className="text-2xl md:text-4xl mb-6 font-primary text-left" 
@@ -114,15 +163,145 @@ const Home = () => {
             >
             <div className="py-2 px-8">
               <p className="text-xl font-medium text-white font-primary">
-                About Us
+                Know More
               </p>
             </div>
             </div>
           </Link>
         </div>
+        </div>
+      </section>
+
+      {/* Products Categories */}
+      <section className="pt-4 pb-20">
+        <div className="max-w-9xl mx-auto px-6">
+          {/* heading */}
+          <div className="flex gap-2 items-center justify-center mb-4">
+            <Sun strokeWidth={3} size={30} className="text-[#235347] "/>
+            <AnimatedHeading text="Products Categories " 
+              className="text-2xl md:text-4xl  font-primary text-left" 
+          />
+          </div>
+          <div className="grid md:grid-cols-4 gap-4 justify-items-center px-10 py-8 relative">
+            {productcategory.map((pcategory) => (
+              <motion.div
+                key={pcategory.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="rounded-xl w-80 shadow-lg  "
+              >
+                <Link to={pcategory.link}
+                  className="group block rounded-xl overflow-hidden"
+                >
+                {/* image */}
+                <div className="relative">
+                  <img src={pcategory.image} alt={pcategory.title} className="w-full h-80 object-cover"/>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                    bg-gradient-to-t from-[#0b1d3a]/90 via-[#0b1d3a]/60 to-transparent"
+                  />
+                  {/* Arrow Icon */}
+                  <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-[#235347] backdrop-blur
+                                  flex items-center justify-center">
+                    <ArrowUpRight className="text-white w-5 h-5" />
+                  </div>
+                  {/* Content */}
+                <div className="absolute pt-4 pb-6 text-center bottom-0 left-0 right-0 text-white 
+                      bg-gradient-to-t from-[#0b1d3a]/90 via-[#0b1d3a]/60 to-transparent ">
+                  <h3 className="text-xl font-semibold font-primary">{pcategory.title}</h3>
+                </div>
+                </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries we serve section */}
+      <section className="relative pt-14 pb-10 bg-[url('images/industrybghome.jpg')] bg-cover bg-center">
+        {/* overlay */}
+        <div className="absolute inset-0 bg-white/20" />
+
+        <div className="max-w-7xl mx-auto px-6 relative">
+          {/* heading */}
+          <div className="flex gap-2 items-center justify-center mb-12">
+            <Sun strokeWidth={3} size={30} className="text-[#235347] "/>
+            <AnimatedHeading text="Industries We Serve" 
+              className="text-2xl md:text-4xl font-primary text-left" 
+          /></div>
+          {/* grid list */}
+          <div className="grid md:grid-cols-3 gap-8 rounded-xl py-20 bg-black/70">
+            {industries.map((item, index) => (
+              <div key={index}
+                className="flex flex-col items-center text-center text-white"
+              >
+                {/* image */}
+                <img src={item.image} alt={item.title} 
+                  className="w-16 h-16 mb-4 object-cover"
+                />
+                {/* underline */}
+                <span className="w-10 h-[2px] bg-white mb-3" />
+                {/* title */}
+                <h3 className="text-xl tracking-wide">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-4">
+            <MotionLink to="/" whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-2 rounded-full font-primary bg-[#235347] hover:bg-[#DAF1DE] shadow-2xl text-white 
+                  hover:text-black border border-transparent hover:border-[#235347] font-semibold inline-block">
+                See More
+            </MotionLink>
+          </div>
+        </div>
+      </section>
+
+      {/* Manufacturing process section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="flex gap-2 items-center justify-center mb-12">
+            <Sun strokeWidth={3} size={30} className="text-[#235347] "/>
+            <AnimatedHeading text="Manufacturing Process " 
+              className="text-2xl md:text-4xl font-primary text-left" 
+          /></div>
+          {/* cards steps section*/}
+          <div className="grid md:grid-cols-4 gap-8 relative">
+            {/* dashed lines desktop only */}
+            <div className="hidden md:block absolute inset-0">
+              <div className="absolute top-1/2 left-[12%] right-[12%] border-t-2 border-dashed border-gray-700 -z-10"/>
+            </div>
+
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return(
+                <div
+                key={index}
+                className="bg-[#235347] text-white p-8 min-h-[220px] rounded-lg flex flex-col justify-center"
+              >
+                <Icon className="text-white mb-6" size={36} />
+
+                <h3 className="text-xl font-bold mb-4">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {step.desc}
+                </p>
+              </div>
+              )
+            })}
+          </div>
+        </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 export default Home
