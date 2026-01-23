@@ -182,7 +182,7 @@ const Home = () => {
               className="text-2xl md:text-4xl  font-primary text-left" 
           />
           </div>
-          <div className="grid sm:grid:cols-1 md:grid-cols-4 gap-4 justify-items-center px-2 py-8 relative">
+          <div className="grid sm:grid:cols-1 md:grid-cols-4 gap-4 justify-items-center py-8 relative">
             {productcategory.map((pcategory) => (
               <motion.div
                 key={pcategory.id}
