@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Car, Hospital, Bolt, Factory, Warehouse, Amphora } from "lucide-react";
 
 const industries = [
