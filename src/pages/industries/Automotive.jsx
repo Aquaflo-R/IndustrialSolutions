@@ -9,7 +9,7 @@ export default function Automotive() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         {/* Hero Image */}
         <img
-          src="public/images/solar-panel.jpg"
+          src="images/solar-panel.jpg"
           alt="Automotive Renewable Energy"
           className="absolute inset-0 w-full h-full object-cover"
         />
