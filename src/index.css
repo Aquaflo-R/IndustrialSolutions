@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+@theme{
   /* Brand / Primary */
   --color-primary: #0B2B26;        /* Deep Navy / Brand core */
 
@@ -25,3 +25,4 @@ Secondary (#163832, #235347) → Sections, cards, footer
 Accent (#BEB69B) → CTAs, highlights, icons
 
 Background (#DAF1DE) → Page background, light sections */
+
