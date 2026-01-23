@@ -67,56 +67,9 @@ function Header() {
             </div>
           </div>
 
-          {/* Industries dropdown */}
-          <div className="relative group">
-            <button className="flex items-center gap-2 hover:text-secondary-dark">
-              Industries
-              <ChevronDown size={16} />
-            </button>
-            {/* submenu */}
-            <div
-              className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
-                            overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
-                            duration-200"
-            >
-              <Link
-                to="/industries/Automotive"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Automotive
-              </Link>
-              <Link
-                to="/industries/Pharamaceutical"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Pharmaceutical
-              </Link>
-              <Link
-                to="/industries/EnergyUtilities"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Energy & Utilities
-              </Link>
-              <Link
-                to="/industries/Manufacturing"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Manufacturing
-              </Link>
-              <Link
-                to="/industries/LogisticsWarehouse"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Logistics & Warehouse
-              </Link>
-              <Link
-                to="/industries/OilGas"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Oil & Gas
-              </Link>
-            </div>
-          </div>
+          <Link to="/industries" className="hover:text-secondary-dark">
+            Industries
+          </Link>
           
           <Link to="/process" className="hover:text-secondary-dark">
             Process
