@@ -182,7 +182,7 @@ const Home = () => {
               className="text-2xl md:text-4xl  font-primary text-left" 
           />
           </div>
-          <div className="grid md:grid-cols-4 gap-4 justify-items-center px-10 py-8 relative">
+          <div className="grid sm:grid:cols-1 md:grid-cols-4 gap-4 justify-items-center px-2 py-8 relative">
             {productcategory.map((pcategory) => (
               <motion.div
                 key={pcategory.id}
@@ -221,7 +221,7 @@ const Home = () => {
       </section>
 
       {/* Industries we serve section */}
-      <section className="relative pt-14 pb-10 bg-[url('images/industrybghome.jpg')] bg-cover bg-center">
+      <section className="relative pt-14 pb-10 bg-[url('/images/industrybghome.jpg')] bg-cover bg-center">
         {/* overlay */}
         <div className="absolute inset-0 bg-white/20" />
 
