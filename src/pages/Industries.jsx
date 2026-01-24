@@ -106,7 +106,7 @@ export default function Industries() {
             <div className="flex justify-center ">
               <Link
                 to="/industries"
-                className="px-6 py-3 bg-primary rounded-full border border-accent text-white font-semibold hover:bg-accent/20 transition"
+                className="px-6 py-3 bg-primary rounded-full border border-accent text-white font-semibold hover:bg-accent hover:border-primary hover:text-primary transition"
               >
                 Explore Industries
               </Link>

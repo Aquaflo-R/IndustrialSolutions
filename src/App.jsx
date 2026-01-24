@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./pages/Home";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router";
 
 import About from "./pages/About";
 import Products from "./pages/products/Products";
