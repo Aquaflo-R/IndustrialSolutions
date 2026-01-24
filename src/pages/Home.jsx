@@ -1,10 +1,14 @@
 import { easeInOut, motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router";
-import { Sun, ArrowUpRight, Users, MessageSquare, Puzzle, Building2 } from "lucide-react";
+import { Sun, ArrowUpRight, Users, MessageSquare, Puzzle, Building2, CheckCheck } from "lucide-react";
 import AnimatedHeading from "../components/Animatedheading";
-
+import ModelForm from "../components/ModelForm";
+import solarcta from "/icons/solarcta.png";
 
 const Home = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   const MotionLink = motion(Link);
   // products categories
   const productcategory = [
@@ -51,6 +55,22 @@ const Home = () => {
       title: "CONSTRUCT",
       desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accuntium.",
       icon: Building2,
+    },
+  ];
+
+  // why choose us
+  const benefits = [
+    {
+      title: "Quality :",
+      desc: "Delivering high-quality, reliable energy solutions built to meet global standards."
+    },
+    {
+      title: "Experience :",
+      desc: "Backed by proven expertise and industry knowledge across diverse energy projects."
+    },
+    {
+      title: "Capacity :",
+      desc: "Equipped with the resources and capability to handle projects of any scale efficiently."
     },
   ];
   return (
@@ -188,8 +208,8 @@ const Home = () => {
                 key={pcategory.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
                 className="rounded-xl w-80 shadow-lg  "
               >
                 <Link to={pcategory.link}
@@ -264,7 +284,7 @@ const Home = () => {
 
       {/* Manufacturing process section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 pb-6">
           {/* Heading */}
           <div className="flex gap-2 items-center justify-center mb-12">
             <Sun strokeWidth={3} size={30} className="text-[#235347] "/>
@@ -281,8 +301,15 @@ const Home = () => {
             {steps.map((step, index) => {
               const Icon = step.icon;
               return(
-                <div
+                <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                whileHover={{ y: -8, boxShadow: "0 25px 40px rgba(0,0,0,0.15)",
+                  transition: { type: "spring", stiffness: 400, damping: 20 },
+                }}
                 className="bg-[#235347] text-white p-8 min-h-[220px] rounded-lg flex flex-col justify-center"
               >
                 <Icon className="text-white mb-6" size={36} />
@@ -294,12 +321,88 @@ const Home = () => {
                 <p className="text-gray-300 leading-relaxed text-sm">
                   {step.desc}
                 </p>
-              </div>
+              </motion.div>
               )
             })}
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-[#163832]">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          {/* content div */}
+          <motion.div  initial={{ opacity: 0, x: -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.95 }}>
+            <div className="flex gap-2 items-center mb-4">
+            <Sun strokeWidth={2} size={16} className="text-white"/>
+            <h2 className="text-sm font-primary font-semibold text-white tracking-wider">Trusted & Affordable</h2>
+            </div>
+            <h2 className="font-primary text-5xl font-bold text-white mb-6">Why Choose Us</h2>
+            <ul className="space-y-5">
+              {benefits.map((item, index) => (
+                <li key={index} className="flex gap-3 items-center">
+                  <CheckCheck size={30} className="text-accent mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold font-primary text-xl text-white mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm font-secondary text-white leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          {/* image div */}
+          <div className="justify-items-center">
+            <motion.img src="images/homechooseus.png" alt="whychooseus" 
+              className="w-[90%] px-2 rounded-3xl object-cover"
+              initial={{ opacity: 0, scale: 0.80 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9 }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto justify-items-center px-6 py-10 rounded-4xl grid md:grid-cols-2 gap-2 items-center bg-[#163832]">
+          {/* text */}
+          <div>
+            <h2 className="font-primary text-5xl font-bold text-white mb-6">
+              Ready to power your future?
+            </h2>
+          <p className="text-sm font-secondary text-white leading-relaxed mb-6">
+            Request a personalized quote today and take the first step toward clean, reliable energy.
+          </p>
+          <button
+            onClick={() => setModalOpen(true)}
+            className="px-8 py-2 rounded-full font-primary bg-[#235347] hover:bg-[#DAF1DE] shadow-2xl text-white 
+                hover:text-black border border-transparent hover:border-[#235347] font-semibold inline-block cursor-pointer"
+          >
+            Request A Quote
+          </button>
+          </div>
+          {/* image */}
+          <div className="justify-items-center">
+            <img src={solarcta} alt="" className=" w-[70%] object-cover"/>
+          </div>
+        </div>
+      </section>
+      {/* MODAL */}
+      {isModalOpen && (
+        <ModelForm
+          isOpen={isModalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
+
     </main>
   )
 }
