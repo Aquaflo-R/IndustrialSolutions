@@ -38,9 +38,10 @@ export default function AutomotiveIndustry() {
   return (
     <div className="bg-bg-primary text-primary font-lato">
       {/* HERO SECTION */}
-      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary">
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br 
+        from-primary via-secondary to-secondary">
         {/* BACKGROUND IMAGE */}
-        <div className="absolute inset-0 bg-[url('/images/solarauto.jpeg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
 
         {/* CENTERED CONTENT */}
         <motion.div

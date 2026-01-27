@@ -9,7 +9,6 @@ const industries = [
     description:
       "Energy-efficient solutions for automotive manufacturing and assembly plants.",
     link: "/industries/Automotive",
-    image: "public/images/solar-panel.jpg",
   },
   {
     title: "Pharmaceutical",
@@ -17,7 +16,6 @@ const industries = [
     description:
       "Reliable and clean power systems for pharma production and research facilities.",
     link: "/industries/Pharmaceutical",
-    image: "public/images/solar-panel.jpg",
   },
   {
     title: "Energy & Utilities",
@@ -25,7 +23,6 @@ const industries = [
     description:
       "Scalable renewable energy solutions supporting utility-scale operations.",
     link: "/industries/EnergyUtilities",
-    image: "public/images/solar-panel.jpg",
   },
   {
     title: "Manufacturing",
@@ -33,7 +30,6 @@ const industries = [
     description:
       "Optimized solar and wind systems for heavy and light manufacturing units.",
     link: "/industries/Manufacturing",
-    image: "public/images/solar-panel.jpg",
   },
   {
     title: "Logistics & Warehousing",
@@ -41,7 +37,6 @@ const industries = [
     description:
       "Cost-effective renewable energy for warehouses and logistics hubs.",
     link: "/industries/LogisticsWarehouse",
-    image: "public/images/solar-panel.jpg",
   },
   {
     title: "Oil & Gas (Transition)",
@@ -49,7 +44,6 @@ const industries = [
     description:
       "Hybrid renewable systems supporting energy transition initiatives.",
     link: "/industries/OilGas",
-    image: "public/images/solar-panel.jpg",
   },
 ];
 
