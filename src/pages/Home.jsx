@@ -148,20 +148,40 @@ const Home = () => {
         {/* image div */}
         <div className="relative w-full max-w-xl">
           {/* main image */}
-          <img src="images/habout1.jpg" alt="about" className="w-full px-2 rounded-3xl object-cover"/>
+          <motion.img
+            initial={{ opacity: 0, scale: 0.80 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }} 
+            src="images/habout1.jpg" alt="about" className="w-full px-2 rounded-3xl object-cover"/>
           {/* experience badge */}
-          <div className="absolute bottom-8 left-10 bg-[#163832] text-white w-40 h-28 rounded-2xl flex flex-col
+          <motion.div 
+            initial={{ opacity: 0, x: -95 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.95 }}
+            className="absolute bottom-8 left-10 bg-[#163832] text-white w-40 h-28 rounded-2xl flex flex-col
             items-center justify-center shadow-lg">
               <h3 className="text-4xl font-bold">10+</h3>
               <p className="text-sm mt-1">Years of Experience</p>
-          </div>
+          </motion.div>
           {/* second image */}
-          <img src="images/habout2.jpg" alt="Solarpanelhouse" className="absolute -bottom-20 -right-0 w-[40%]
+          <motion.img
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.95 }} 
+            src="images/habout2.jpg" alt="Solarpanelhouse" className="absolute -bottom-20 -right-0 w-[40%]
            md:-right-8 rounded-3xl object-cover shadow-xl border-4 border-white" />
         </div>
 
         {/* text div */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 95 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.95 }}
+        >
           <div className="flex gap-2 items-center">
             <Sun strokeWidth={3} size={20} className="text-[#235347]"/>
             <h2 className="text-2xl font-primary font-bold text-[#235347]">About Us</h2>
@@ -188,7 +208,7 @@ const Home = () => {
             </div>
             </div>
           </Link>
-        </div>
+        </motion.div>
         </div>
       </section>
 
@@ -255,7 +275,12 @@ const Home = () => {
           {/* grid list */}
           <div className="grid md:grid-cols-3 gap-8 rounded-xl py-20 bg-black/70">
             {industries.map((item, index) => (
-              <div key={index}
+              <motion.div key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                whileHover={{ transition: { type: "spring", stiffness: 400, damping: 20 },}}
                 className="flex flex-col items-center text-center text-white"
               >
                 {/* image */}
@@ -268,7 +293,7 @@ const Home = () => {
                 <h3 className="text-xl tracking-wide">
                   {item.title}
                 </h3>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="text-center mt-4">
@@ -372,7 +397,13 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto justify-items-center px-6 py-10 rounded-4xl grid md:grid-cols-2 gap-2 items-center bg-[#163832]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.80 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="max-w-7xl mx-auto justify-items-center px-6 py-10 rounded-4xl grid md:grid-cols-2 
+              gap-2 items-center bg-[#163832]">
           {/* text */}
           <div>
             <h2 className="font-primary text-5xl font-bold text-white mb-6">
@@ -393,7 +424,7 @@ const Home = () => {
           <div className="justify-items-center">
             <img src={solarcta} alt="" className=" w-[70%] object-cover"/>
           </div>
-        </div>
+        </motion.div>
       </section>
       {/* MODAL */}
       {isModalOpen && (

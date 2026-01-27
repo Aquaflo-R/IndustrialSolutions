@@ -217,7 +217,7 @@ function Infrastructure() {
       </section>
 
       {/* Safety & Standards */}
-      <section className="py-28 bg-secondary text-[#DAF1DE]">
+      <section className="py-28 bg-secondary text-bg-primary">
         <div className="max-w-6xl mx-auto px-6">
           <motion.h2
             variants={fadeUp}

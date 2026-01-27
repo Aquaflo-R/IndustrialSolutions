@@ -14,16 +14,12 @@ function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 w-full bg-bg-primary/40 z-50 border-b-2"
-
-      className="fixed top-0 left-0 w-full bg-bg-primary/40 relative z-50 border-b-2"
-
     >
-      <div className=" mx-auto px-10 py-4  flex  justify-between items-center">
+      <div className="mx-auto px-10 py-4 flex justify-between items-center">
         {/* Logo */}
-        {/* <h1 className="text-xl font-bold text-indigo-600">Brand</h1> */}
         <Link to="/" className="flex items-center">
           <img
-            src="images/logo.png"
+            src="/images/logo.png"
             alt="Brand Logo"
             className="h-10 md:h-12 w-auto"
           />
@@ -31,45 +27,17 @@ function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 text-base font-medium">
-          <Link to="/" className="hover:text-secondary-dark">
-            Home
-          </Link>
-          <Link to="/about" className="hover:text-secondary-dark">
-            About Us
-          </Link>
-          {/* <Link to="/product" className="hover:text-indigo-900">Products</Link> */}
-          {/* Products dropdown */}
+          <Link to="/" className="hover:text-secondary-dark">Home</Link>
+          <Link to="/about" className="hover:text-secondary-dark">About Us</Link>
+
+          {/* Products Dropdown */}
           <div className="relative group">
             <button className="flex items-center gap-2 hover:text-secondary-dark">
-              Products
-              <ChevronDown size={16} />
+              Products <ChevronDown size={16} />
             </button>
-            {/* submenu */}
-            {/* <div className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
-                            overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
-                            duration-200"
-                        >
-                            <Link
-                                to="/products/SolarPanel" 
-                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
-                                Solar Panel
-                            </Link>
-                            <Link
-                                to="/products/rechargeablebatteries" 
-                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
-                                Rechargeable Batteries
-                            </Link>
-                            <Link
-                                to="/products/powerelectricalplug" 
-                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
-                                Power Electrical Plug
-                            </Link>
-                        </div> */}
-            <div
-              className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
-              overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
-              duration-200"
-            >
+
+            <div className="absolute left-0 top-full mt-3 w-60 bg-white text-black rounded-lg shadow-lg
+              overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {categories.map((cat) => (
                 <Link
                   key={cat.slug}
@@ -87,68 +55,13 @@ function Header() {
               </Link>
             </div>
           </div>
-          <Link to="/industries" className="hover:text-secondary-dark">
-            Industries
-          </Link>
-          <Link to="/process" className="hover:text-secondary-dark">
-            Process
-          </Link>
-          <Link to="/infrastructure" className="hover:text-secondary-dark">
-            Infrastructure
-          </Link>
-          <Link to="/caseStudies" className="hover:text-secondary-dark">
-            Case Studies
-          </Link>
-          <Link to="/contact" className="hover:text-secondary-dark">
-            Contact
-          </Link>
-        </div>
 
-            <div
-              className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
-                            overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
-                            duration-200"
-            >
-              <Link
-                to="/products/SolarPanel"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Solar Panel
-              </Link>
-              <Link
-                to="/products/rechargeablebatteries"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Rechargeable Batteries
-              </Link>
-              <Link
-                to="/products/powerelectricalplug"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Power Electrical Plug
-              </Link>
-            </div>
-          </div>
-
-          <Link to="/industries" className="hover:text-secondary-dark">
-            Industries
-          </Link>
-          
-          <Link to="/process" className="hover:text-secondary-dark">
-            Process
-          </Link>
-          <Link to="/infrastructure" className="hover:text-secondary-dark">
-            Infrastructure
-          </Link>
-          <Link to="/caseStudies" className="hover:text-secondary-dark">
-            Case Studies
-          </Link>
-          <Link to="/contact" className="hover:text-secondary-dark">
-            Contact
-          </Link>
+          <Link to="/industries" className="hover:text-secondary-dark">Industries</Link>
+          <Link to="/process" className="hover:text-secondary-dark">Process</Link>
+          <Link to="/infrastructure" className="hover:text-secondary-dark">Infrastructure</Link>
+          <Link to="/caseStudies" className="hover:text-secondary-dark">Case Studies</Link>
+          <Link to="/contact" className="hover:text-secondary-dark">Contact</Link>
         </div>
-=======
->>>>>>>
 
         {/* Mobile Menu Button */}
         <button
@@ -170,26 +83,10 @@ function Header() {
             className="md:hidden bg-white border-t"
           >
             <div className="flex flex-col gap-4 px-6 py-6 text-base font-medium">
-              <Link to="/" onClick={() => setOpen(false)}>
-                Home
-              </Link>
-              <Link to="/about" onClick={() => setOpen(false)}>
-                About Us
-              </Link>
+              <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+              <Link to="/about" onClick={() => setOpen(false)}>About Us</Link>
 
-              {/* Products Dropdown (Mobile) */}
-<<<<<<< HEAD
-              <Link onClick={() => setOpen(false)} to="/">
-                Home
-              </Link>
-              <Link onClick={() => setOpen(false)} to="/about">
-                About Us
-              </Link>
-              {/* <Link onClick={() => setOpen(false)} to="/product">Products</Link> */}
               {/* Mobile Products Dropdown */}
-              {/* Products (Page link + dropdown) */}
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
               <div>
                 <button
                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -198,15 +95,12 @@ function Header() {
                   <span>Products</span>
                   <ChevronDown
                     size={18}
-                    className={`transition-transform duration-200 ${
+                    className={`transition-transform ${
                       mobileProductsOpen ? "rotate-180" : ""
                     }`}
                   />
                 </button>
-<<<<<<< HEAD
 
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                 <AnimatePresence>
                   {mobileProductsOpen && (
                     <motion.div
@@ -216,10 +110,6 @@ function Header() {
                       transition={{ duration: 0.25 }}
                       className="ml-4 mt-2 flex flex-col gap-2 text-sm"
                     >
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                       {categories.map((cat) => (
                         <Link
                           key={cat.slug}
@@ -236,91 +126,24 @@ function Header() {
 
                       <Link
                         to="/products/all"
-<<<<<<< HEAD
-                      <Link
-                        to="/products/solarpanel"
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
-                        onClick={() => {
-                          setOpen(false);
-                          setMobileProductsOpen(false);
-                        }}
-<<<<<<< HEAD
-                      >
-                        Solar Panel
-                      </Link>
-
-                      <Link
-                        to="/products/rechargeablebatteries"
-                        onClick={() => {
-                          setOpen(false);
-                          setMobileProductsOpen(false);
-                        }}
                         className="mt-2 font-medium border-t pt-2"
+                        onClick={() => {
+                          setOpen(false);
+                          setMobileProductsOpen(false);
+                        }}
                       >
                         All Products
-
-                      >
-                        Rechargeable Batteries
-                      </Link>
-
-                      <Link
-                        to="/products/powerelectricalplug"
-                        onClick={() => {
-                          setOpen(false);
-                          setMobileProductsOpen(false);
-                        }}
-                      >
-                        Power Electrical Plug
-
-=======
-                        className="mt-2 font-medium border-t pt-2"
-                      >
-                        All Products
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
-
-              <Link to="/industries" onClick={() => setOpen(false)}>
-                Industries
-              </Link>
-              <Link to="/process" onClick={() => setOpen(false)}>
-                Process
-              </Link>
-              <Link to="/infrastructure" onClick={() => setOpen(false)}>
-                Infrastructure
-              </Link>
-              <Link to="/caseStudies" onClick={() => setOpen(false)}>
-                Case Studies
-              </Link>
-              <Link to="/contact" onClick={() => setOpen(false)}>
-<<<<<<< HEAD
-
-              <Link onClick={() => setOpen(false)} to="/industries">
-                Industries
-              </Link>
-              <Link onClick={() => setOpen(false)} to="/process">
-                Process
-              </Link>
-              <Link onClick={() => setOpen(false)} to="/infrastructure">
-                Infrastructure
-              </Link>
-              <Link onClick={() => setOpen(false)} to="/caseStudies">
-                Case Studies
-              </Link>
-              <Link onClick={() => setOpen(false)} to="/contact">
-
-=======
->>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
-                Contact
-              </Link>
+              <Link to="/industries" onClick={() => setOpen(false)}>Industries</Link>
+              <Link to="/process" onClick={() => setOpen(false)}>Process</Link>
+              <Link to="/infrastructure" onClick={() => setOpen(false)}>Infrastructure</Link>
+              <Link to="/caseStudies" onClick={() => setOpen(false)}>Case Studies</Link>
+              <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
             </div>
           </motion.div>
         )}
