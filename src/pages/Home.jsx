@@ -76,7 +76,8 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden  h-150 content-center bg-[url('/images/solarheroimg.png')] bg-cover bg-center">
+      <section className="relative overflow-hidden mt-20 h-150 content-center bg-[url('/images/solarheroimg.png')] 
+          bg-cover bg-center">
         <div className="absolute inset-0 bg-[#100e12] opacity-70 z-0"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-20">
           <motion.h1
@@ -401,7 +402,7 @@ const Home = () => {
           initial={{ opacity: 0, scale: 0.80 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 1.9 }}
           className="max-w-7xl mx-auto justify-items-center px-6 py-10 rounded-4xl grid md:grid-cols-2 
               gap-2 items-center bg-[#163832]">
           {/* text */}

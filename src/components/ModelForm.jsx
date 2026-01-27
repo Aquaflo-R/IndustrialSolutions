@@ -33,7 +33,7 @@ function ModelForm({ isOpen, onClose }) {
           </h3>
           <button
             onClick={onClose}
-            className="text-xl text-[#0B2B26] hover:text-[#235347]"
+            className="text-xl text-[#0B2B26] hover:text-[#235347] cursor-pointer"
           >
             ✕
           </button>

@@ -35,7 +35,8 @@ function Footer() {
                 </div>
                 {/* Pages div*/}
                 <div className="justify-items-center">
-                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b border-[#DAF1DE] inline-block">
+                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b 
+                        border-[#DAF1DE] inline-block">
                         Quick Links
                     </h4>
                     <ul className="space-y-3 mt-4">
@@ -60,38 +61,46 @@ function Footer() {
                     </ul>
                 </div>
                 {/* Products div */}
-                <div className="justify-items-center">
-                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b border-[#DAF1DE] inline-block">
+                <div className=" text-left pl-4">
+                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b 
+                        ml-8 border-[#DAF1DE] inline-block">
                         Products
                     </h4>
                     <ul className="space-y-3 mt-4">
                         <li>
                             <Link to="/" className="flex items-center gap-1 font-secondary hover:text-[#DAF1DE]">
                             <Minus />
-                            <span>Demo Product</span>
+                            <span>Solar Inverters</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/" className="flex items-center gap-1 font-secondary hover:text-[#DAF1DE]">
                             <Minus />
-                            <span>Demo Product</span>
+                            <span>Solar Panels</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/" className="flex items-center gap-1 font-secondary hover:text-[#DAF1DE]">
                             <Minus />
-                            <span>Demo Product</span>
+                            <span>Energy Storage Systems</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/" className="flex items-center gap-1 font-secondary hover:text-[#DAF1DE]">
+                            <Minus />
+                            <span>Solar Monitoring & Control</span>
                             </Link>
                         </li>
                     </ul>
                 </div>
                 {/* Contact div */}
-                <div>
-                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b border-[#DAF1DE] inline-block">
+                <div className="text-left pl-4">
+                    <h4 className="text-2xl text-[#DAF1DE] font-primary font-semibold pb-2 mb-2 border-b 
+                          ml-8 border-[#DAF1DE] inline-block">
                         Contact Us
                     </h4>
                     <ul className="space-y-4 mt-4 text-gray-400 ">
-                        <li className="flex gap-14 items-center font-secondary">
+                        <li className="flex gap-2 items-center font-secondary">
                             <MotionPhone size={24} className="text-[#DAF1DE]"
                                 initial={{ rotate: 0 }}
                                 whileHover={{ rotate: 360 }}
@@ -102,7 +111,7 @@ function Footer() {
                                 <p>+91-9900999009</p>
                             </div>
                         </li>
-                        <li className="flex gap-14 items-center font-secondary">
+                        <li className="flex gap-2 items-center font-secondary">
                             <MotionMail size={24} className="text-[#DAF1DE]"
                                 initial={{ rotate: 0 }}
                                 whileHover={{ rotate: 360 }}
@@ -122,23 +131,32 @@ function Footer() {
                 </div>
             </div>
             {/* Bottom Bar */}
-            <div className="bg-[#235347] flex justify-evenly py-5 text-[#BEB69B] font-primary text-center py-4 -mb-6 
-              text-sm ">
-              <div className="flex gap-1">
+            <div className="bg-[#235347] flex flex-col md:flex-row justify-evenly items-center gap-3 
+                py-4 text-[#BEB69B] font-primary text-center text-sm -mb-6">
+  
+              {/* Copyright */}
+              <div className="flex flex-col md:flex-row gap-1">
                 © {new Date().getFullYear()}{" "}
-                <a href="#" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-[#0B2B26]">
-                    IndustrialSolutions</a>
-                 {" "}All Rights Reserved | Designed & Developed by{" "}
-                <a href="#" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-[#0B2B26]">
-                    DarkELiteCreations</a>
+                <a href="#" className="font-semibold hover:text-[#0B2B26]">
+                  IndustrialSolutions
+                </a> {" "}All Rights Reserved | Designed & Developed by{" "}
+                <a href="#" className="font-semibold hover:text-[#0B2B26]">
+                  DarkELiteCreations
+                </a>
               </div>
+
+              {/* Terms & Privacy */}
               <div className="flex gap-4">
-                <a href="#" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-[#0B2B26]">
-                    Terms & Conditions</a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-[#0B2B26]">
-                    Privacy Policy</a>
+                <a href="#" className="font-semibold hover:text-[#0B2B26]">
+                  Terms & Conditions
+                </a>
+                <a href="#" className="font-semibold hover:text-[#0B2B26]">
+                  Privacy Policy
+                </a>
               </div>
+
             </div>
+
         </footer>
     )
 }
