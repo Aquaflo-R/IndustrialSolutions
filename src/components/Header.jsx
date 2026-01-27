@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { categories } from "../data/categories";
 
-
 function Header() {
   const [open, setOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -15,7 +14,9 @@ function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 w-full bg-bg-primary/40 z-50 border-b-2"
+
       className="fixed top-0 left-0 w-full bg-bg-primary/40 relative z-50 border-b-2"
+
     >
       <div className=" mx-auto px-10 py-4  flex  justify-between items-center">
         {/* Logo */}
@@ -102,6 +103,7 @@ function Header() {
             Contact
           </Link>
         </div>
+
             <div
               className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
                             overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
@@ -145,6 +147,8 @@ function Header() {
             Contact
           </Link>
         </div>
+=======
+>>>>>>>
 
         {/* Mobile Menu Button */}
         <button
@@ -174,6 +178,7 @@ function Header() {
               </Link>
 
               {/* Products Dropdown (Mobile) */}
+<<<<<<< HEAD
               <Link onClick={() => setOpen(false)} to="/">
                 Home
               </Link>
@@ -183,6 +188,8 @@ function Header() {
               {/* <Link onClick={() => setOpen(false)} to="/product">Products</Link> */}
               {/* Mobile Products Dropdown */}
               {/* Products (Page link + dropdown) */}
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
               <div>
                 <button
                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -196,7 +203,10 @@ function Header() {
                     }`}
                   />
                 </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                 <AnimatePresence>
                   {mobileProductsOpen && (
                     <motion.div
@@ -206,7 +216,10 @@ function Header() {
                       transition={{ duration: 0.25 }}
                       className="ml-4 mt-2 flex flex-col gap-2 text-sm"
                     >
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                       {categories.map((cat) => (
                         <Link
                           key={cat.slug}
@@ -223,12 +236,16 @@ function Header() {
 
                       <Link
                         to="/products/all"
+<<<<<<< HEAD
                       <Link
                         to="/products/solarpanel"
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                         onClick={() => {
                           setOpen(false);
                           setMobileProductsOpen(false);
                         }}
+<<<<<<< HEAD
                       >
                         Solar Panel
                       </Link>
@@ -256,12 +273,20 @@ function Header() {
                       >
                         Power Electrical Plug
 
+=======
+                        className="mt-2 font-medium border-t pt-2"
+                      >
+                        All Products
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
 
               <Link to="/industries" onClick={() => setOpen(false)}>
                 Industries
@@ -276,6 +301,7 @@ function Header() {
                 Case Studies
               </Link>
               <Link to="/contact" onClick={() => setOpen(false)}>
+<<<<<<< HEAD
 
               <Link onClick={() => setOpen(false)} to="/industries">
                 Industries
@@ -291,6 +317,8 @@ function Header() {
               </Link>
               <Link onClick={() => setOpen(false)} to="/contact">
 
+=======
+>>>>>>> 4ec5d175fd9ac05c11a16f9bd5a8d361c7dbbf3a
                 Contact
               </Link>
             </div>
