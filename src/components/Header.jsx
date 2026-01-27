@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { categories } from "../data/categories";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ function Header() {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full bg-bg-primary/40 relative z-50 border-b-2"
+      className="fixed top-0 left-0 w-full bg-bg-primary/40 z-50 border-b-2"
     >
       <div className=" mx-auto px-10 py-4  flex  justify-between items-center">
         {/* Logo */}
@@ -41,36 +42,51 @@ function Header() {
               <ChevronDown size={16} />
             </button>
             {/* submenu */}
-            <div
-              className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
+            {/* <div className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
                             overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
                             duration-200"
+                        >
+                            <Link
+                                to="/products/SolarPanel" 
+                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
+                                Solar Panel
+                            </Link>
+                            <Link
+                                to="/products/rechargeablebatteries" 
+                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
+                                Rechargeable Batteries
+                            </Link>
+                            <Link
+                                to="/products/powerelectricalplug" 
+                                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark">
+                                Power Electrical Plug
+                            </Link>
+                        </div> */}
+            <div
+              className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
+              overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
+              duration-200"
             >
+              {categories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  to={`/products/category/${cat.slug}`}
+                  className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
+                >
+                  {cat.title}
+                </Link>
+              ))}
               <Link
-                to="/products/SolarPanel"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
+                to="/products/all"
+                className="block px-4 py-2 font-medium border-t hover:bg-gray-200 hover:text-secondary-dark"
               >
-                Solar Panel
-              </Link>
-              <Link
-                to="/products/rechargeablebatteries"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Rechargeable Batteries
-              </Link>
-              <Link
-                to="/products/powerelectricalplug"
-                className="block px-4 py-2 hover:bg-gray-200 hover:text-secondary-dark"
-              >
-                Power Electrical Plug
+                All Products
               </Link>
             </div>
           </div>
-
           <Link to="/industries" className="hover:text-secondary-dark">
             Industries
           </Link>
-          
           <Link to="/process" className="hover:text-secondary-dark">
             Process
           </Link>
@@ -105,15 +121,14 @@ function Header() {
             className="md:hidden bg-white border-t"
           >
             <div className="flex flex-col gap-4 px-6 py-6 text-base font-medium">
-              <Link onClick={() => setOpen(false)} to="/">
+              <Link to="/" onClick={() => setOpen(false)}>
                 Home
               </Link>
-              <Link onClick={() => setOpen(false)} to="/about">
+              <Link to="/about" onClick={() => setOpen(false)}>
                 About Us
               </Link>
-              {/* <Link onClick={() => setOpen(false)} to="/product">Products</Link> */}
-              {/* Mobile Products Dropdown */}
-              {/* Products (Page link + dropdown) */}
+
+              {/* Products Dropdown (Mobile) */}
               <div>
                 <button
                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -136,52 +151,48 @@ function Header() {
                       transition={{ duration: 0.25 }}
                       className="ml-4 mt-2 flex flex-col gap-2 text-sm"
                     >
-                      <Link
-                        to="/products/solarpanel"
-                        onClick={() => {
-                          setOpen(false);
-                          setMobileProductsOpen(false);
-                        }}
-                      >
-                        Solar Panel
-                      </Link>
+                      {categories.map((cat) => (
+                        <Link
+                          key={cat.slug}
+                          to={`/products/category/${cat.slug}`}
+                          onClick={() => {
+                            setOpen(false);
+                            setMobileProductsOpen(false);
+                          }}
+                          className="hover:text-secondary-dark"
+                        >
+                          {cat.title}
+                        </Link>
+                      ))}
 
                       <Link
-                        to="/products/rechargeablebatteries"
+                        to="/products/all"
                         onClick={() => {
                           setOpen(false);
                           setMobileProductsOpen(false);
                         }}
+                        className="mt-2 font-medium border-t pt-2"
                       >
-                        Rechargeable Batteries
-                      </Link>
-
-                      <Link
-                        to="/products/powerelectricalplug"
-                        onClick={() => {
-                          setOpen(false);
-                          setMobileProductsOpen(false);
-                        }}
-                      >
-                        Power Electrical Plug
+                        All Products
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-              <Link onClick={() => setOpen(false)} to="/industries">
+
+              <Link to="/industries" onClick={() => setOpen(false)}>
                 Industries
               </Link>
-              <Link onClick={() => setOpen(false)} to="/process">
+              <Link to="/process" onClick={() => setOpen(false)}>
                 Process
               </Link>
-              <Link onClick={() => setOpen(false)} to="/infrastructure">
+              <Link to="/infrastructure" onClick={() => setOpen(false)}>
                 Infrastructure
               </Link>
-              <Link onClick={() => setOpen(false)} to="/caseStudies">
+              <Link to="/caseStudies" onClick={() => setOpen(false)}>
                 Case Studies
               </Link>
-              <Link onClick={() => setOpen(false)} to="/contact">
+              <Link to="/contact" onClick={() => setOpen(false)}>
                 Contact
               </Link>
             </div>
