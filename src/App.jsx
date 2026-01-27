@@ -10,6 +10,7 @@ import Infrastructure from "./pages/Infrastructure";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 /* INDUSTRY DETAIL PAGES */
 import Automotive from "./pages/industries/Automotive";
@@ -53,6 +54,8 @@ function App() {
           <Route path="/industries/OilGas" element={<OilGas />} />
           <Route path="/industries/Manufacturing" element={<Manufacturing />} />
         </Routes>
+
+        <Footer />
       </HashRouter>
     </>
   );
