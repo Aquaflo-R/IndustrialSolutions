@@ -39,18 +39,12 @@ function App() {
 
         {/* Industries */}
         <Route path="/industries" element={<Industries />} />
-        <Route path="/industries/automotive" element={<Automotive />} />
-        <Route path="/industries/pharmaceutical" element={<Pharmaceutical />} />
-        <Route
-          path="/industries/energy-utilities"
-          element={<EnergyUtilities />}
-        />
-        <Route
-          path="/industries/logistics-warehouse"
-          element={<LogisticsWarehouse />}
-        />
-        <Route path="/industries/oil-gas" element={<OilGas />} />
-        <Route path="/industries/manufacturing" element={<Manufacturing />} />
+        <Route path="/industries/Automotive" element={<Automotive />} />
+        <Route path="/industries/Pharmaceutical" element={<Pharmaceutical />} />
+        <Route path="/industries/EnergyUtilities" element={<EnergyUtilities />} />
+        <Route path="/industries/LogisticsWarehouse" element={<LogisticsWarehouse />} />
+        <Route path="/industries/OilGas" element={<OilGas />} />
+        <Route path="/industries/Manufacturing" element={<Manufacturing />} />
 
         {/* Other Pages */}
         <Route path="/process" element={<Process />} />
