@@ -40,7 +40,7 @@ export default function AutomotiveIndustry() {
       {/* HERO SECTION */}
       <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary">
         {/* BACKGROUND IMAGE */}
-        <div className="absolute inset-0 bg-[url('/images/solarpanel.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/images/solarauto.jpeg')] bg-cover bg-center opacity-20" />
 
         {/* CENTERED CONTENT */}
         <motion.div
