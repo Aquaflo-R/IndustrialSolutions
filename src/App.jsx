@@ -10,6 +10,9 @@ import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Productdetails from "./pages/products/Productdetails";
+import ProductCategory from "./pages/products/Productcategory";
+import Allproducts from "./pages/products/Allproducts";
+
 function App() {
   return (
     <>
@@ -20,6 +23,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route
+              path="/products/category/:slug"
+              element={<ProductCategory />}
+            />
+            <Route path="/products/all" element={<Allproducts />} />
+            <Route path="/products/:slug" element={<Productdetails />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/process" element={<Process />} />
             <Route path="/infrastructure" element={<Infrastructure />} />
