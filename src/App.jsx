@@ -10,11 +10,9 @@ import Infrastructure from "./pages/Infrastructure";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
-<<<<<<< HEAD
 import Productdetails from "./pages/products/Productdetails";
 import ProductCategory from "./pages/products/Productcategory";
 import Allproducts from "./pages/products/Allproducts";
-=======
 
 /* INDUSTRY DETAIL PAGES */
 import Automotive from "./pages/industries/Automotive";
@@ -23,12 +21,11 @@ import EnergyUtilities from "./pages/industries/EnergyUtilities";
 import LogisticsWarehouse from "./pages/industries/LogisticsWarehouse";
 import OilGas from "./pages/industries/OilGas";
 import Manufacturing from "./pages/industries/Manufacturing";
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
+
 
 function App() {
   return (
     <>
-<<<<<<< HEAD
       <div>
         <HashRouter>
           <Header />
@@ -51,7 +48,6 @@ function App() {
           </Routes>
         </HashRouter>
       </div>
-=======
       <HashRouter>
         <Header />
 
@@ -84,7 +80,6 @@ function App() {
           <Route path="/industries/Manufacturing" element={<Manufacturing />} />
         </Routes>
       </HashRouter>
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
     </>
   );
 }

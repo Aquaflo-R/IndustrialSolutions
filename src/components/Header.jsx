@@ -2,11 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-<<<<<<< HEAD
 import { categories } from "../data/categories";
-=======
 
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -16,11 +14,8 @@ function Header() {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-<<<<<<< HEAD
       className="fixed top-0 left-0 w-full bg-bg-primary/40 z-50 border-b-2"
-=======
       className="fixed top-0 left-0 w-full bg-bg-primary/40 relative z-50 border-b-2"
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
     >
       <div className=" mx-auto px-10 py-4  flex  justify-between items-center">
         {/* Logo */}
@@ -49,7 +44,6 @@ function Header() {
               <ChevronDown size={16} />
             </button>
             {/* submenu */}
-<<<<<<< HEAD
             {/* <div className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
                             overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
                             duration-200"
@@ -108,8 +102,6 @@ function Header() {
             Contact
           </Link>
         </div>
-
-=======
             <div
               className="absolute left-0 top-full mt-3 w-58 bg-white text-black rounded-lg shadow-lg
                             overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all 
@@ -154,7 +146,6 @@ function Header() {
           </Link>
         </div>
 
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-secondary-dark"
@@ -175,7 +166,6 @@ function Header() {
             className="md:hidden bg-white border-t"
           >
             <div className="flex flex-col gap-4 px-6 py-6 text-base font-medium">
-<<<<<<< HEAD
               <Link to="/" onClick={() => setOpen(false)}>
                 Home
               </Link>
@@ -184,7 +174,6 @@ function Header() {
               </Link>
 
               {/* Products Dropdown (Mobile) */}
-=======
               <Link onClick={() => setOpen(false)} to="/">
                 Home
               </Link>
@@ -194,7 +183,6 @@ function Header() {
               {/* <Link onClick={() => setOpen(false)} to="/product">Products</Link> */}
               {/* Mobile Products Dropdown */}
               {/* Products (Page link + dropdown) */}
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
               <div>
                 <button
                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -208,10 +196,7 @@ function Header() {
                     }`}
                   />
                 </button>
-<<<<<<< HEAD
 
-=======
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
                 <AnimatePresence>
                   {mobileProductsOpen && (
                     <motion.div
@@ -221,7 +206,7 @@ function Header() {
                       transition={{ duration: 0.25 }}
                       className="ml-4 mt-2 flex flex-col gap-2 text-sm"
                     >
-<<<<<<< HEAD
+
                       {categories.map((cat) => (
                         <Link
                           key={cat.slug}
@@ -238,7 +223,6 @@ function Header() {
 
                       <Link
                         to="/products/all"
-=======
                       <Link
                         to="/products/solarpanel"
                         onClick={() => {
@@ -251,16 +235,14 @@ function Header() {
 
                       <Link
                         to="/products/rechargeablebatteries"
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
                         onClick={() => {
                           setOpen(false);
                           setMobileProductsOpen(false);
                         }}
-<<<<<<< HEAD
                         className="mt-2 font-medium border-t pt-2"
                       >
                         All Products
-=======
+
                       >
                         Rechargeable Batteries
                       </Link>
@@ -273,13 +255,13 @@ function Header() {
                         }}
                       >
                         Power Electrical Plug
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
+
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
+
 
               <Link to="/industries" onClick={() => setOpen(false)}>
                 Industries
@@ -294,7 +276,7 @@ function Header() {
                 Case Studies
               </Link>
               <Link to="/contact" onClick={() => setOpen(false)}>
-=======
+
               <Link onClick={() => setOpen(false)} to="/industries">
                 Industries
               </Link>
@@ -308,7 +290,7 @@ function Header() {
                 Case Studies
               </Link>
               <Link onClick={() => setOpen(false)} to="/contact">
->>>>>>> cb7a15b05426b10ee40fee0efe8eeffe91cf6473
+
                 Contact
               </Link>
             </div>
