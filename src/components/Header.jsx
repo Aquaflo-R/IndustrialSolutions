@@ -19,7 +19,7 @@ function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="/images/logo.png"
+            src="images/logo.png"
             alt="Brand Logo"
             className="h-10 md:h-12 w-auto"
           />
