@@ -61,7 +61,7 @@ export default function Industries() {
           style={{ y: bgY }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-secondary/80 to-primary/70" />
+        <div className="absolute inset-0 bg-linear-to-b from-primary/90 via-secondary/80 to-primary/70" />
 
         <div className="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-accent/20 animate-pulse" />
         <div className="absolute bottom-16 -right-24 w-64 h-64 rounded-full bg-bg-primary/10 animate-pulse" />
@@ -101,11 +101,11 @@ export default function Industries() {
 
       {/* OVERVIEW SECTION */}
       <section className="relative overflow-hidden bg-[#F6FBF9] py-24 pb-36 font-lato">
-        <div className="absolute -top-24 -left-24 w-[26rem] h-[26rem]
-                        bg-gradient-to-br from-[#9FE870]/40 to-[#4CAF50]/30
+        <div className="absolute -top-24 -left-24 w-104 h-104
+                        bg-linear-to-br from-[#9FE870]/40 to-[#4CAF50]/30
                         rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[32rem] h-[32rem]
-                        bg-gradient-to-tr from-primary/20 to-secondary/20
+        <div className="absolute bottom-0 right-0 w-lg h-128
+                        bg-linear-to-tr from-primary/20 to-secondary/20
                         rounded-full blur-3xl" />
 
         <h2 className="absolute inset-0 flex items-center justify-center
@@ -165,9 +165,9 @@ export default function Industries() {
             <div className="relative w-full max-w-xl">
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276"
+                  src="images\industries-solor-panel1.jpg"
                   alt="Solar installation"
-                  className="w-full h-[26rem] object-cover"
+                  className="w-full h- object-cover"
                 />
 
                 <div className="absolute bottom-6 right-6 bg-primary text-bg-primary
@@ -182,7 +182,7 @@ export default function Industries() {
               <div className="absolute -bottom-16 -left-12 w-64">
                 <div className="overflow-hidden rounded-3xl border-4 border-white shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+                    src="images\industries-solor-panel.jpg"
                     alt="Solar powered home"
                     className="w-full h-48 object-cover"
                   />
@@ -194,7 +194,7 @@ export default function Industries() {
       </section>
 
       {/* INDUSTRY CARDS */}
-      <section className="relative py-20 bg-gradient-to-b from-bg-primary to-white">
+      <section className="relative py-20 bg-linear-to-b from-bg-primary to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-2">
             Driving Industries with Clean Energy
