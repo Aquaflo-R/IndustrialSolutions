@@ -124,7 +124,7 @@ export default function Industries() {
           >
             <span className="inline-block px-4 py-1 text-xs uppercase tracking-widest
                              bg-primary/10 text-primary rounded-full">
-              Credible Facts
+              Incredible Facts
             </span>
 
             <h3 className="text-4xl md:text-5xl font-bold text-primary leading-tight font-raleway">
