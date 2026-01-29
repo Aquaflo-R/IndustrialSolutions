@@ -55,7 +55,7 @@ export default function Industries() {
     <div className="min-h-screen font-raleway">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-primary">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-primary mt-20">
         <motion.div
           className="absolute inset-0 bg-cover bg-center bg-[url('/images/industry-bg.jpg')]"
           style={{ y: bgY }}

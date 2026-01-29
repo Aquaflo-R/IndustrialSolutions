@@ -8,9 +8,9 @@ const fadeUp = {
 
 function Infrastructure() {
   return (
-    <main className="bg-bg-primary text-primary overflow-hidden">
+    <main className="bg-bg-primary text-primary overflow-hidden mt-20">
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary">
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <img
@@ -89,21 +89,15 @@ function Infrastructure() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="relative font-raleway text-5xl md:text-6xl xl:text-7xl
-                 font-semibold text-bg-primary leading-tight"
+            className="relative font-raleway text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight"
           >
-            <span className="relative z-10">
+            <span className="relative z-10 text-bg-primary">
               Built for Scale.
               <br />
               Engineered for Reliability.
             </span>
 
-            {/* MASK OVERLAY */}
-            <span
-              className="absolute inset-0 text-transparent
-                   bg-[linear-gradient(120deg,rgba(190,182,155,0.25)_0%,transparent_45%)]
-                   bg-clip-text pointer-events-none"
-            >
+            <span className="absolute inset-0 text-transparent bg-[linear-gradient(120deg,rgba(190,182,155,0.25)_0%,transparent_45%)] bg-clip-text pointer-events-none">
               Built for Scale.
               <br />
               Engineered for Reliability.
@@ -115,8 +109,7 @@ function Infrastructure() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
             className="mt-8 mx-auto max-w-3xl
-                 font-lato text-lg md:text-xl
-                 text-bg-primary/85"
+                 font-lato text-md md:text-lg text-bg-primary/85"
           >
             Our infrastructure forms the backbone of large-scale solar and wind
             energy manufacturing — delivering performance, precision, and

@@ -21,6 +21,11 @@ import LogisticsWarehouse from "./pages/industries/LogisticsWarehouse";
 import OilGas from "./pages/industries/OilGas";
 import Manufacturing from "./pages/industries/Manufacturing";
 
+/* CASE STYUDY DETAIL PAGE */
+import RenewableAutomotive from "./pages/casestudies/RenewableAutomotive";
+import SmartFactory from "./pages/casestudies/SmartFactory";
+import SustainableManufacturing from "./pages/casestudies/SustainableManufacturing";
+
 
 function App() {
   return (
@@ -46,10 +51,15 @@ function App() {
         <Route path="/industries/OilGas" element={<OilGas />} />
         <Route path="/industries/Manufacturing" element={<Manufacturing />} />
 
+        {/* Case Studies */}
+        <Route path="/CaseStudies/RenewableAutomotive" element={<RenewableAutomotive />} />
+        <Route path="/CaseStudies/SmartFactory" element={<SmartFactory />} />
+        <Route path="/CaseStudies/SustainableManufacturing" element={<SustainableManufacturing />} />
+
         {/* Other Pages */}
         <Route path="/process" element={<Process />} />
         <Route path="/infrastructure" element={<Infrastructure />} />
-        <Route path="/caseStudies" element={<CaseStudies />} />
+        <Route path="/CaseStudies" element={<CaseStudies />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
