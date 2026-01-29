@@ -181,7 +181,7 @@ const Home = () => {
           initial={{ opacity: 0, x: 95 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.95 }}
+          transition={{ duration: 1.9 }}
         >
           <div className="flex gap-2 items-center">
             <Sun strokeWidth={3} size={20} className="text-[#235347]"/>

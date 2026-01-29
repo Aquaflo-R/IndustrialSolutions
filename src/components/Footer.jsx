@@ -108,7 +108,6 @@ function Footer() {
                             />
                             <div>
                                 <p>+91-9900999009</p>
-                                <p>+91-9900999009</p>
                             </div>
                         </li>
                         <li className="flex gap-2 items-center font-secondary">
