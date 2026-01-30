@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Layers } from "lucide-react";
+import { Link } from "react-router";
 
 const RenewableAutomotive = () => {
   return (
@@ -14,7 +15,7 @@ const RenewableAutomotive = () => {
         />
 
         {/* layered overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary/90 via-primary/80 to-primary/70" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(190,182,155,0.25),transparent_45%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-28 grid lg:grid-cols-2 gap-20">
@@ -48,18 +49,18 @@ const RenewableAutomotive = () => {
           >
             <div className="grid grid-cols-3 gap-6">
               {[
-                { value: "38%", label: "Energy Reduced" },
-                { value: "24MW", label: "Clean Power" },
-                { value: "31%", label: "CO₂ Cut" },
+                { value: "25%", label: "Water Saved" },
+                { value: "120 tons", label: "Waste Reduced" },
+                { value: "500 trees", label: "Trees Planted" },
               ].map((item, i) => (
                 <div
                   key={i}
                   className="backdrop-blur-xl bg-bg-primary/10 border border-bg-primary/20 rounded-2xl p-6"
                 >
-                  <p className="text-3xl font-semibold text-bg-primary">
+                  <p className="text-2xl font-semibold text-bg-primary">
                     {item.value}
                   </p>
-                  <p className="mt-1 text-xs text-bg-primary/70 uppercase tracking-wide">
+                  <p className="mt-1 text-sm text-bg-primary/70 uppercase tracking-wide">
                     {item.label}
                   </p>
                 </div>
@@ -152,9 +153,9 @@ const RenewableAutomotive = () => {
       </section>
 
       {/* IMPACT */}
-      <section className="px-20 py-32">
+      <section className="px-20 py-24">
         <div>
-          <h2 className="text-3xl font-semibold mb-14 px-2">Business Impact</h2>
+          <h2 className="text-4xl font-semibold mb-14 px-2">Business Impact</h2>
 
           <div className="grid md:grid-cols-3 gap-12">
             {[
@@ -168,18 +169,28 @@ const RenewableAutomotive = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
-                className="relative rounded-2xl p-10 bg-bg-primary border border-accent/30 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
+                className="relative rounded-2xl p-10 bg-bg-primary/10 border border-accent/40 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
               >
                 <p className="text-4xl font-semibold text-accent">
                   {item.value}
                 </p>
-                <p className="mt-3 text-sm text-primary/80 uppercase tracking-wide">
+                <p className="mt-3 text-sm text-primary uppercase tracking-wide">
                   {item.label}
                 </p>
               </motion.div>
             ))}
           </div>
         </div>
+
+        {/* BACK BUTTON */}
+          <div className="mt-16 text-center">
+            <Link
+              to="/casestudies"
+              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6"
+            >
+              BACK
+            </Link>
+          </div>
       </section>
     </div>
   );

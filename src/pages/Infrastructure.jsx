@@ -34,7 +34,7 @@ function Infrastructure() {
             ease: "linear",
           }}
         >
-          <g fill="none" stroke="rgba(190,182,155,0.10)" strokeWidth="2">
+          <g fill="none" stroke="rgba(233, 231, 225, 0.308)" strokeWidth="2">
             {/* Blade 1 */}
             <path d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z" />
             {/* Blade 2 */}
@@ -65,8 +65,8 @@ function Infrastructure() {
         >
           <g
             fill="none"
-            stroke="rgba(190,182,155,0.16)" // SAME blueprint opacity
-            strokeWidth="2" // SAME stroke weight
+            stroke="rgba(233, 231, 225, 0.308)" 
+            strokeWidth="2" 
           >
             {/* Blade 1 */}
             <path d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z" />
@@ -443,9 +443,9 @@ function Infrastructure() {
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 180, damping: 10 }}
-                    className="w-10 h-10 mb-6 rounded-full bg-accent/20 flex items-center justify-center"
+                    className="w-10 h-10 mb-6 rounded-full bg-accent/30 flex items-center justify-center"
                   >
-                    <item.Icon size={18} className="text-accent" />
+                    <item.Icon size={18} className="text-[#a89557]" />
                   </motion.div>
 
                   <h3 className="font-raleway text-lg font-semibold text-primary mb-3">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Zap, Leaf, BatteryCharging, Sun, Wind, Battery } from "lucide-react";
+import { Link } from "react-router";
 
 export default function EnergyUtilitiesIndustry() {
   const products = [
@@ -38,9 +39,9 @@ export default function EnergyUtilitiesIndustry() {
   return (
     <div className="bg-bg-primary text-primary font-lato">
       {/* HERO SECTION */}
-      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary">
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary  mt-20">
         {/* BACKGROUND IMAGE */}
-        <div className="absolute inset-0 bg-[url('images/energy-plant.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
 
         {/* CENTERED CONTENT */}
         <motion.div
@@ -59,15 +60,6 @@ export default function EnergyUtilitiesIndustry() {
           </p>
         </motion.div>
       </section>
-
-      {/* PREMIUM ANIMATED DIVIDER */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="origin-left h-px bg-linear-to-r from-transparent via-secondary-dark to-transparent max-w-5xl mx-auto"
-      />
 
       {/* CONTENT SECTION */}
       <section
@@ -155,9 +147,7 @@ export default function EnergyUtilitiesIndustry() {
       </section>
 
       {/* SOLUTIONS OFFERED SECTION */}
-      <section
-        className="relative py-28 overflow-hidden bg-linear-to-b from-primary via-secondary to-primary"
-      >
+      <section className="relative py-28 overflow-hidden bg-linear-to-b from-primary via-secondary to-primary">
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center mb-24">
             <h2 className="font-raleway text-5xl md:text-5xl font-bold tracking-wider text-bg-primary">
@@ -314,6 +304,16 @@ export default function EnergyUtilitiesIndustry() {
                 </motion.div>
               </motion.div>
             ))}
+          </div>
+
+          {/* BACK BUTTON */}
+          <div className="mt-16 text-center">
+            <Link
+              to="/industries"
+              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6"
+            >
+              BACK
+            </Link>
           </div>
         </motion.div>
       </section>

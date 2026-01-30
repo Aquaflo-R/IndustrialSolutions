@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Zap, Leaf, BatteryCharging, Sun, Wind, Battery } from "lucide-react";
+import { Zap, Leaf, BatteryCharging, Sun, Wind } from "lucide-react";
+import { Link } from "react-router";
 
 export default function AutomotiveIndustry() {
   const products = [
@@ -38,8 +39,10 @@ export default function AutomotiveIndustry() {
   return (
     <div className="bg-bg-primary text-primary font-lato">
       {/* HERO SECTION */}
-      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br 
-        from-primary via-secondary to-secondary">
+      <section
+        className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br 
+        from-primary via-secondary to-secondary mt-20"
+      >
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
 
@@ -60,15 +63,6 @@ export default function AutomotiveIndustry() {
           </p>
         </motion.div>
       </section>
-
-      {/* PREMIUM ANIMATED DIVIDER */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="origin-left h-px bg-linear-to-r from-transparent via-secondary-dark to-transparent max-w-5xl mx-auto"
-      />
 
       {/* CONTENT SECTION */}
       <section
@@ -267,9 +261,9 @@ export default function AutomotiveIndustry() {
       </section>
 
       <section className="relative py-24 overflow-hidden">
-        {" "}
-        {/* Gradient Background */}{" "}
-        <div className="absolute inset-0 bg-linear-to-br from-[#E0F7F1] to-[#F7FFF5] z-0" />{" "}
+         
+        {/* Gradient Background */}    
+        <div className="absolute inset-0 bg-linear-to-br from-[#E0F7F1] to-[#F7FFF5] z-0" />    
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -277,18 +271,18 @@ export default function AutomotiveIndustry() {
           transition={{ duration: 0.8 }}
           className="relative max-w-7xl mx-auto px-6 text-primary z-20"
         >
-          {" "}
-          {/* Section Heading */}{" "}
+              
+          {/* Section Heading */}    
           <div className="text-center mb-20">
-            {" "}
+                
             <h2 className="font-raleway text-5xl font-bold">
-              {" "}
-              Related Products{" "}
-            </h2>{" "}
-          </div>{" "}
-          {/* Cards */}{" "}
+                  
+              Related Products    
+            </h2>    
+          </div>    
+          {/* Cards */}    
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-            {" "}
+                
             {products.map((item, i) => (
               <motion.div
                 key={i}
@@ -302,10 +296,10 @@ export default function AutomotiveIndustry() {
                 }}
                 className="relative"
               >
-                {" "}
-                {/* Static Offset Border */}{" "}
-                <div className="absolute -top-3 -left-3 w-[94%] h-[94%] border-4 border-accent z-0 rounded-xl" />{" "}
-                {/* Card with Motion */}{" "}
+                    
+                {/* Static Offset Border */}    
+                <div className="absolute -top-3 -left-3 w-[94%] h-[94%] border-4 border-accent z-0 rounded-xl" />    
+                {/* Card with Motion */}    
                 <motion.div
                   className="relative bg-white z-10 p-10 shadow-xl rounded-xl overflow-hidden cursor-pointer"
                   whileHover={{
@@ -315,27 +309,36 @@ export default function AutomotiveIndustry() {
                   }}
                   transition={{ type: "spring", stiffness: 120, damping: 14 }}
                 >
-                  {" "}
-                  {/* Card Content */}{" "}
+                      
+                  {/* Card Content */}    
                   <h3 className="font-raleway font-semibold text-xl mb-4 text-primary">
-                    {" "}
-                    {item.title}{" "}
-                  </h3>{" "}
+                        
+                    {item.title}    
+                  </h3>    
                   <p className="font-lato text-sm text-secondary leading-relaxed">
-                    {" "}
-                    {item.description}{" "}
-                  </p>{" "}
-                  {/* Optional subtle hover overlay */}{" "}
+                        
+                    {item.description}    
+                  </p>    
+                  {/* Optional subtle hover overlay */}    
                   <motion.div
                     className="absolute inset-0 bg-accent opacity-0"
                     whileHover={{ opacity: 0.03 }}
                     transition={{ duration: 0.3 }}
-                  />{" "}
-                </motion.div>{" "}
+                  />
+                </motion.div>    
               </motion.div>
-            ))}{" "}
-          </div>{" "}
-        </motion.div>{" "}
+            ))}
+          </div>
+          {/* BACK BUTTON */}
+          <div className="mt-16 text-center">
+            <Link
+              to="/industries"
+              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6"
+            >
+              BACK
+            </Link>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

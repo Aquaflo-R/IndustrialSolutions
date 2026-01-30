@@ -1,47 +1,47 @@
 import { motion } from "framer-motion";
-import { Zap, Leaf, BatteryCharging, Sun, Wind, Battery } from "lucide-react";
+import { Zap, Leaf, BatteryCharging, Sun, Wind } from "lucide-react";
+import { Link } from "react-router";
 
 export default function PharmaceuticalIndustry() {
   const products = [
-  {
-    title: "Cleanroom HVAC Climate Control",
-    description:
-      "High-efficiency HVAC solutions ensuring sterile conditions, precise airflow, and optimal climate control in pharma facilities.",
-  },
-  {
-    title: "Automated Laboratory Testing Instruments",
-    description:
-      "Precision automated lab instruments designed for consistent, high-throughput pharmaceutical testing, analysis, and quality control workflows.",
-  },
-  {
-    title: "Packaging And Bottling Machines",
-    description:
-      "Robust, reliable machinery for safe, compliant, and efficient packaging and bottling of pharmaceutical products at scale.",
-  },
-  {
-    title: "Energy Storage Systems Pharma Plants",
-    description:
-      "Advanced battery storage systems ensuring uninterrupted power supply for critical operations in pharmaceutical manufacturing facilities.",
-  },
-  {
-    title: "Hybrid Renewable Energy Solutions Pharma",
-    description:
-      "Integrated solar and wind energy systems providing clean, reliable power to pharmaceutical plants while reducing emissions.",
-  },
-  {
-    title: "Monitoring And Compliance Systems",
-    description:
-      "Digital monitoring solutions enabling real-time operational analytics, traceability, and full regulatory compliance for pharmaceutical processes.",
-  },
-];
-
+    {
+      title: "Cleanroom HVAC Climate Control",
+      description:
+        "High-efficiency HVAC solutions ensuring sterile conditions, precise airflow, and optimal climate control in pharma facilities.",
+    },
+    {
+      title: "Automated Laboratory Testing Instruments",
+      description:
+        "Precision automated lab instruments designed for consistent, high-throughput pharmaceutical testing, analysis, and quality control workflows.",
+    },
+    {
+      title: "Packaging And Bottling Machines",
+      description:
+        "Robust, reliable machinery for safe, compliant, and efficient packaging and bottling of pharmaceutical products at scale.",
+    },
+    {
+      title: "Energy Storage Systems Pharma Plants",
+      description:
+        "Advanced battery storage systems ensuring uninterrupted power supply for critical operations in pharmaceutical manufacturing facilities.",
+    },
+    {
+      title: "Hybrid Renewable Energy Solutions Pharma",
+      description:
+        "Integrated solar and wind energy systems providing clean, reliable power to pharmaceutical plants while reducing emissions.",
+    },
+    {
+      title: "Monitoring And Compliance Systems",
+      description:
+        "Digital monitoring solutions enabling real-time operational analytics, traceability, and full regulatory compliance for pharmaceutical processes.",
+    },
+  ];
 
   return (
     <div className="bg-bg-primary text-primary font-lato">
       {/* HERO SECTION */}
-      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary">
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary mt-20">
         {/* BACKGROUND IMAGE */}
-        <div className="absolute inset-0 bg-[url('images/pharma-factory.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
 
         {/* CENTERED CONTENT */}
         <motion.div
@@ -158,9 +158,7 @@ export default function PharmaceuticalIndustry() {
       </section>
 
       {/* SOLUTIONS OFFERED SECTION */}
-      <section
-        className="relative py-28 overflow-hidden bg-linear-to-b from-primary via-secondary to-primary"
-      >
+      <section className="relative py-28 overflow-hidden bg-linear-to-b from-primary via-secondary to-primary">
         <div className="relative max-w-7xl mx-auto px-6">
           {/* SECTION HEADER */}
           <div className="text-center mb-24">
@@ -322,6 +320,16 @@ export default function PharmaceuticalIndustry() {
                 </motion.div>
               </motion.div>
             ))}
+          </div>
+
+          {/* BACK BUTTON */}
+          <div className="mt-16 text-center">
+            <Link
+              to="/industries"
+              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6"
+            >
+              BACK
+            </Link>
           </div>
         </motion.div>
       </section>
