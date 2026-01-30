@@ -112,50 +112,50 @@ const About = () => {
       </section>
 
       {/* Company Overview Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 pb-10 grid md:grid-cols-2 gap-16 items-center">
-        {/* image div */}
-        <div className="relative w-full max-w-xl flex gap-2">
-          {/* main image */}
-          <motion.img
-            initial={{ opacity: 0, scale: 0.80 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }} 
-            src="images/solar-panel-forest.jpg" alt="about" className="w-[55%] mb-10 rounded-3xl object-cover"/>
-          
-          {/* second image */}
-          <motion.img
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.95 }} 
-            src="images/water-tank-storage.jpg" alt="Solarpanelhouse" className="mt-24 w-[44%] md:w-[52%]
-            rounded-3xl object-cover" />
-        </div>
-
-        {/* text div */}
-        <motion.div
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.9 }}
-        >
-          <div className="flex gap-2 items-center pt-8">
-            <Sun strokeWidth={3} size={20} className="text-[#235347]"/>
-            <h2 className="text-2xl font-primary font-bold text-[#235347]">About Us</h2>
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto pb-10 grid md:grid-cols-2 gap-16 items-center">
+          {/* image div */}
+          <div className="relative w-full max-w-xl flex gap-2">
+            {/* main image */}
+            <motion.img
+              initial={{ opacity: 0, scale: 0.80 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9 }} 
+              src="images/solar-panel-forest.jpg" alt="about" className="w-[55%] mb-10 rounded-3xl object-cover"/>
+            
+            {/* second image */}
+            <motion.img
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.95 }} 
+              src="images/water-tank-storage.jpg" alt="Solarpanelhouse" className="mt-24 w-[44%] md:w-[52%]
+              rounded-3xl object-cover" />
           </div>
-          <AnimatedHeading text="Smart Energy Solutions for a | Greener Tomorrow." 
-              className="text-2xl md:text-4xl mb-6 font-primary text-left" 
-          />
-          <p className="text-gray-600 text-lg font-secondary text-justify leading-relaxed">
-              We are a clean energy solutions company delivering reliable, efficient, and sustainable power systems 
-              for diverse applications. Focused on innovation and quality, we design and deploy advanced solar and 
-              energy solutions tailored to modern needs. Backed by an experienced team and strong infrastructure, 
-              we execute projects of all scales while empowering businesses and communities to achieve a greener, 
-              more energy-independent future.
-          </p>
-        </motion.div>
+
+          {/* text div */}
+          <motion.div
+            initial={{ opacity: 0, x: 120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.9 }}
+          >
+            <div className="flex gap-2 items-center pt-8">
+              <Sun strokeWidth={3} size={20} className="text-[#235347]"/>
+              <h2 className="text-2xl font-primary font-bold text-[#235347]">About Us</h2>
+            </div>
+            <AnimatedHeading text="Smart Energy Solutions for a | Greener Tomorrow." 
+                className="text-2xl md:text-4xl mb-6 font-primary text-left" 
+            />
+            <p className="text-gray-600 text-lg font-secondary text-justify leading-relaxed">
+                We are a clean energy solutions company delivering reliable, efficient, and sustainable power systems 
+                for diverse applications. Focused on innovation and quality, we design and deploy advanced solar and 
+                energy solutions tailored to modern needs. Backed by an experienced team and strong infrastructure, 
+                we execute projects of all scales while empowering businesses and communities to achieve a greener, 
+                more energy-independent future.
+            </p>
+          </motion.div>
         </div>
       </section>
 
