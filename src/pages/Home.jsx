@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden mt-20 h-150 content-center bg-[url('/images/solarheroimg.png')] 
+      <section className="relative overflow-hidden h-170 content-center bg-[url('/images/solarheroimg.png')] 
           bg-cover bg-center">
         <div className="absolute inset-0 bg-[#100e12] opacity-70 z-0"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-20">

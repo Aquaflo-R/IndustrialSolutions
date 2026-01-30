@@ -94,7 +94,7 @@ const About = () => {
   return (
     <main>
       {/* Hero section */}
-      <section className="max-w-9xl mt-20 h-90 mx-auto bg-[url('/images/aboutpagehero.jpg')] 
+      <section className="max-w-9xl h-120 mx-auto bg-[url('/images/aboutpagehero.jpg')] 
           bg-cover bg-center pt-12 pb-14 text-center content-center relative ">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/70 z-0"></div>
@@ -104,7 +104,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9 }}
-              className="text-5xl text-white font-primary font-bold mb-8 pt-10"
+              className="text-5xl text-white font-primary font-bold mb-8 pt-10 mt-12"
             >
               About Us
             </motion.h1>
