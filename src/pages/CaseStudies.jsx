@@ -95,24 +95,34 @@ const CaseStudies = () => {
   return (
     <div className="bg-bg-primary min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden mt-20">
+      <section
+        className="relative h-[80vh] flex items-center justify-center overflow-hidden pt-10
+                    max-sm:h-[55vh] max-sm:pt-4"
+      >
+        {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0 bg-[url('/images/caseStudy-hero-bg.jpg')] bg-no-repeat bg-cover bg-center" />
 
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-primary/85" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center max-sm:px-4">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-raleway text-5xl md:text-6xl font-semibold text-bg-primary leading-tight"
+            className="font-raleway text-5xl md:text-6xl font-semibold text-bg-primary leading-tight
+                 max-sm:text-3xl"
           >
             Case Studies
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-4 text-bg-primary/80 text-lg md:text-xl max-w-2xl mx-auto"
+            className="mt-4 text-bg-primary/80 text-lg md:text-xl max-w-2xl mx-auto
+                 max-sm:mt-2 max-sm:text-sm"
           >
             Proof of performance through real-world industrial and energy
             solutions.
@@ -121,113 +131,131 @@ const CaseStudies = () => {
       </section>
 
       {/* CASE STUDY LISTING */}
-      <section className="relative overflow-hidden bg-white py-24">
-        <div className="absolute -top-24 -left-24 w-108 h-104 bg-linear-to-br from-[#9FE870]/40 to-[#4CAF50]/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative overflow-hidden bg-white py-24 max-sm:py-16">
+  {/* BACKGROUND GLOWS */}
+  <div
+    className="absolute -top-24 -left-24 w-108 h-104 bg-linear-to-br
+               from-[#9FE870]/40 to-[#4CAF50]/10 rounded-full blur-3xl pointer-events-none
+               max-sm:-top-16 max-sm:-left-16 max-sm:w-72 max-sm:h-72"
+  />
 
-        <div className="absolute bottom-0 right-0 w-md h-128 bg-linear-to-tr from-primary/10 to-secondary/10 rounded-full blur-3xl pointer-events-none" />
+  <div
+    className="absolute bottom-0 right-0 w-md h-128 bg-linear-to-tr
+               from-primary/10 to-secondary/10 rounded-full blur-3xl pointer-events-none
+               max-sm:w-72 max-sm:h-72"
+  />
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {caseStudies.map((item, i) => {
-              const isHovered = hoveredCard === item.id;
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-6xl mx-auto px-6 max-sm:px-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-sm:gap-8">
+      {caseStudies.map((item, i) => {
+        const isHovered = hoveredCard === item.id;
 
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.08 }}
-                  onMouseEnter={() => setHoveredCard(item.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  className="group relative rounded-2xl overflow-hidden
-                 border border-primary/10
-                 shadow-[0_12px_30px_rgba(11,43,38,0.08)]
-                 hover:shadow-[0_28px_60px_rgba(11,43,38,0.18)]
-                 hover:border-primary/20
-                 hover:-translate-y-1
-                 transition-all duration-300 cursor-pointer"
+        return (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35, delay: i * 0.08 }}
+            onMouseEnter={() => setHoveredCard(item.id)}
+            onMouseLeave={() => setHoveredCard(null)}
+            className="group relative rounded-2xl overflow-hidden
+                       border border-primary/10
+                       shadow-[0_12px_30px_rgba(11,43,38,0.08)]
+                       hover:shadow-[0_28px_60px_rgba(11,43,38,0.18)]
+                       hover:border-primary/20
+                       hover:-translate-y-1
+                       transition-all duration-300 cursor-pointer"
+          >
+            {/* BASE CARD BACKGROUND */}
+            <div
+              className={`absolute inset-0 z-0 transition-opacity duration-500 ${
+                isHovered ? "opacity-0" : "opacity-100"
+              } bg-bg-primary`}
+            />
+
+            {/* HOVER IMAGE */}
+            <motion.div
+              className={`absolute inset-0 z-0 transition-opacity duration-500 ${
+                isHovered ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-full object-cover scale-110
+                           group-hover:scale-105 transition-transform duration-700"
+              />
+              <div
+                className="absolute inset-0 bg-linear-to-t
+                           from-primary/80 via-primary/55 to-primary/35"
+              />
+            </motion.div>
+
+            {/* CONTENT */}
+            <div className="relative z-10 p-6 min-h-55 flex flex-col justify-between
+                            max-sm:p-5 max-sm:min-h-0">
+              <div>
+                <h3
+                  className={`font-raleway text-xl font-semibold transition-colors duration-300
+                              max-sm:text-lg ${
+                                isHovered
+                                  ? "text-bg-primary"
+                                  : "text-primary"
+                              }`}
                 >
-                  {/* BASE CARD BACKGROUND (VISIBLE INITIALLY) */}
-                  <div
-                    className={`absolute inset-0 z-0 transition-opacity duration-500 ${
-                      isHovered ? "opacity-0" : "opacity-100"
-                    } bg-bg-primary`}
-                  />
+                  {item.title}
+                </h3>
 
-                  {/* HOVER IMAGE */}
-                  <motion.div
-                    className={`absolute inset-0 z-0 transition-opacity duration-500 ${
-                      isHovered ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover scale-110
-                     group-hover:scale-105 transition-transform duration-700"
+                <p
+                  className={`mt-3 font-lato text-sm leading-relaxed transition-colors duration-300
+                              max-sm:mt-2 max-sm:text-xs ${
+                                isHovered
+                                  ? "text-bg-primary/90"
+                                  : "text-primary/80"
+                              }`}
+                >
+                  {item.desc}
+                </p>
+
+                {/* METRICS */}
+                <div className="mt-5 grid grid-cols-2 gap-4 max-sm:mt-4">
+                  {item.metrics.map((metric, idx) => (
+                    <Metric
+                      key={idx}
+                      value={metric.value}
+                      label={metric.label}
+                      hovered={isHovered}
                     />
-                    <div
-                      className="absolute inset-0
-                        bg-linear-to-t
-                        from-primary/80 via-primary/55 to-primary/35"
-                    />
-                  </motion.div>
+                  ))}
+                </div>
+              </div>
 
-                  {/* CONTENT */}
-                  <div className="relative z-10 p-6 min-h-55 flex flex-col justify-between">
-                    <div>
-                      <h3
-                        className={`font-raleway text-xl font-semibold transition-colors duration-300 ${
-                          isHovered ? "text-bg-primary" : "text-primary"
-                        }`}
-                      >
-                        {item.title}
-                      </h3>
+              {/* CTA */}
+              <Link
+                to={item.route}
+                className={`mt-6 inline-flex items-center gap-2 text-sm font-medium
+                            transition-colors duration-300 max-sm:mt-4 ${
+                              isHovered
+                                ? "text-bg-primary"
+                                : "text-primary"
+                            }`}
+              >
+                View Case Study
+                <span
+                  className="inline-block h-px w-6 bg-current
+                             group-hover:w-10 transition-all duration-300"
+                />
+              </Link>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
-                      <p
-                        className={`mt-3 font-lato text-sm leading-relaxed transition-colors duration-300 ${
-                          isHovered ? "text-bg-primary/90" : "text-primary/80"
-                        }`}
-                      >
-                        {item.desc}
-                      </p>
-
-                      {/* METRICS */}
-                      <div className="mt-5 grid grid-cols-2 gap-4">
-                        {item.metrics.map((metric, idx) => (
-                          <Metric
-                            key={idx}
-                            value={metric.value}
-                            label={metric.label}
-                            hovered={isHovered}
-                          />
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA */}
-                    <Link
-                      to={item.route}
-                      className={`mt-6 inline-flex items-center gap-2
-                      text-sm font-medium transition-colors duration-300 ${
-                        isHovered ? "text-bg-primary" : "text-primary"
-                      }`}
-                    >
-                      View Case Study
-                      <span
-                        className="inline-block h-px w-6 bg-current
-                       group-hover:w-10 transition-all duration-300"
-                      />
-                    </Link>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

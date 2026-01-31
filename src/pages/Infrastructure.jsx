@@ -8,15 +8,16 @@ const fadeUp = {
 
 function Infrastructure() {
   return (
-    <main className="bg-bg-primary text-primary overflow-hidden mt-20">
+    <main className="bg-bg-primary text-primary overflow-hidden">
       {/* HERO */}
-      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary pt-20">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <img
             src="images/infrastructure-bg.jpg"
             alt="Renewable energy manufacturing facility"
-            className="w-full h-full object-cover scale-110"
+            className="w-full h-full object-cover scale-110
+                 max-sm:scale-100 max-sm:object-top"
           />
           <div className="absolute inset-0 bg-linear-to-b from-primary/90 via-primary/75 to-primary/90" />
         </div>
@@ -25,24 +26,18 @@ function Infrastructure() {
         <motion.svg
           viewBox="0 0 600 600"
           className="absolute right-[-15%] top-1/2 -translate-y-1/2
-             w-160 h-160
-             pointer-events-none z-0"
+               w-160 h-160
+               pointer-events-none z-0
+               max-sm:w-40 max-sm:h-40 max-sm:right-[-5%] max-sm:top-[40%] max-sm:-translate-y-1/2"
           animate={{ rotate: 360 }}
-          transition={{
-            repeat: Infinity,
-            duration: 60,
-            ease: "linear",
-          }}
+          transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
         >
           <g fill="none" stroke="rgba(233, 231, 225, 0.308)" strokeWidth="2">
-            {/* Blade 1 */}
             <path d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z" />
-            {/* Blade 2 */}
             <path
               d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z"
               transform="rotate(120 300 300)"
             />
-            {/* Blade 3 */}
             <path
               d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z"
               transform="rotate(240 300 300)"
@@ -54,28 +49,18 @@ function Infrastructure() {
         <motion.svg
           viewBox="0 0 600 600"
           className="absolute left-[-12%] bottom-[-12%]
-             w-104 h-104
-             pointer-events-none z-0"
+               w-104 h-104
+               pointer-events-none z-0
+               max-sm:w-32 max-sm:h-32 max-sm:left-[-5%] max-sm:bottom-[-5%]"
           animate={{ rotate: -360 }}
-          transition={{
-            repeat: Infinity,
-            duration: 90, // keep slower background motion
-            ease: "linear",
-          }}
+          transition={{ repeat: Infinity, duration: 90, ease: "linear" }}
         >
-          <g
-            fill="none"
-            stroke="rgba(233, 231, 225, 0.308)" 
-            strokeWidth="2" 
-          >
-            {/* Blade 1 */}
+          <g fill="none" stroke="rgba(233, 231, 225, 0.308)" strokeWidth="2">
             <path d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z" />
-            {/* Blade 2 */}
             <path
               d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z"
               transform="rotate(120 300 300)"
             />
-            {/* Blade 3 */}
             <path
               d="M300 70 C340 180 360 260 300 320 C240 260 260 180 300 70 Z"
               transform="rotate(240 300 300)"
@@ -84,12 +69,13 @@ function Infrastructure() {
         </motion.svg>
 
         {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center max-sm:px-4">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="relative font-raleway text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight"
+            className="relative font-raleway text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight
+                 max-sm:text-3xl max-sm:leading-snug"
           >
             <span className="relative z-10 text-bg-primary">
               Built for Scale.
@@ -108,8 +94,8 @@ function Infrastructure() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-8 mx-auto max-w-3xl
-                 font-lato text-md md:text-lg text-bg-primary/85"
+            className="mt-8 mx-auto max-w-3xl font-lato text-md md:text-lg text-bg-primary/85
+                 max-sm:text-sm max-sm:mt-6"
           >
             Our infrastructure forms the backbone of large-scale solar and wind
             energy manufacturing — delivering performance, precision, and
@@ -119,21 +105,30 @@ function Infrastructure() {
       </section>
 
       {/* Factory Overview */}
-      <section className="relative py-24 overflow-hidden bg-bg-primary">
+      <section className="relative py-24 overflow-hidden bg-bg-primary max-sm:py-14">
         {/* SOFT INDUSTRIAL BACKGROUND */}
         <div className="absolute inset-0">
           {/* base gradient */}
           <div className="absolute inset-0 bg-linear-to-br from-white/60 via-bg-primary to-bg-primary" />
 
           {/* accent glow – scale & infrastructure */}
-          <div className="absolute -top-40 -left-40 w-130 h-130 bg-accent/15 rounded-full blur-[120px]" />
+          <div
+            className="absolute -top-40 -left-40 w-130 h-130 bg-accent/15 rounded-full blur-[120px]
+                 max-sm:-top-20 max-sm:-left-20 max-sm:w-56 max-sm:h-56 max-sm:blur-[70px]"
+          />
 
           {/* secondary depth glow */}
-          <div className="absolute bottom-0 right-0 w-105 h-105 bg-secondary/10 rounded-full blur-[140px]" />
+          <div
+            className="absolute bottom-0 right-0 w-105 h-105 bg-secondary/10 rounded-full blur-[140px]
+                 max-sm:w-44 max-sm:h-44 max-sm:blur-[80px] max-sm:bottom-[-16px] max-sm:right-[-8px]"
+          />
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <div
+          className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center
+               max-sm:grid-cols-1 max-sm:gap-10 max-sm:px-4"
+        >
           {/* LEFT CONTENT */}
           <motion.div
             variants={fadeUp}
@@ -141,29 +136,34 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="font-raleway text-4xl font-semibold text-primary">
+            <h2 className="font-raleway text-4xl font-semibold text-primary max-sm:text-3xl">
               World-Class Manufacturing Facilities
             </h2>
 
-            <p className="mt-4 text-accent font-semibold uppercase tracking-wider text-sm">
+            <p className="mt-4 text-accent font-semibold uppercase tracking-wider text-sm max-sm:mt-2 max-sm:text-xs">
               Precision. Efficiency. Reliability.
             </p>
 
-            <p className="mt-6 font-lato text-primary/75 leading-relaxed">
+            <p
+              className="mt-6 font-lato text-primary/75 leading-relaxed
+                    max-sm:mt-3 max-sm:text-sm"
+            >
               Our manufacturing units are strategically designed to support
               high-volume renewable energy equipment production, ensuring
               consistent quality and operational efficiency.
             </p>
 
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-8 space-y-4 max-sm:mt-5 max-sm:space-y-2.5">
               {[
                 "Large-scale production floors",
                 "Advanced material handling systems",
                 "Optimized logistics flow",
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
+                <li key={i} className="flex items-center gap-4 max-sm:gap-3">
                   <span className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-lato text-primary">{item}</span>
+                  <span className="font-lato text-primary text-sm max-sm:text-xs">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -176,17 +176,20 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-3"
           >
             {[
-              { src: "images/infra-1.jpg", extraClass: "-mt-6" }, // shifted up
+              { src: "images/infra-1.jpg", extraClass: "-mt-6 max-sm:-mt-2" },
               { src: "images/infra-2.jpg", extraClass: "" },
-              { src: "images/infra-3.jpg", extraClass: "-mt-6" }, // shifted up
+              { src: "images/infra-3.jpg", extraClass: "-mt-6 max-sm:-mt-2" },
               { src: "images/infra-4.jpg", extraClass: "" },
             ].map((img, i) => (
               <div
                 key={i}
-                className={`relative h-60 rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(11,43,38,0.25)] ${img.extraClass}`}
+                className={`relative h-60 rounded-xl overflow-hidden
+                      shadow-[0_20px_60px_rgba(11,43,38,0.25)]
+                      ${img.extraClass}
+                      max-sm:h-44`}
               >
                 <img
                   src={img.src}
@@ -202,11 +205,11 @@ function Infrastructure() {
       </section>
 
       {/* Machinery & Equipment */}
-      <section className="relative py-28 bg-primary text-white overflow-hidden">
+      <section className="relative py-28 bg-primary text-white overflow-hidden max-sm:py-16">
         {/* depth background */}
         <div className="absolute inset-0 bg-linear-to-br from-primary via-secondary to-primary" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 max-sm:px-4">
           {/* HEADER */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -215,7 +218,7 @@ function Infrastructure() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-raleway text-4xl md:text-5xl font-semibold">
+            <h2 className="font-raleway text-4xl md:text-5xl font-semibold max-sm:text-3xl">
               Advanced Machinery & Equipment
             </h2>
 
@@ -225,10 +228,10 @@ function Infrastructure() {
               whileInView={{ width: 96 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="mt-6 mx-auto h-0.5 bg-accent"
+              className="mt-6 mx-auto h-0.5 bg-accent max-sm:mt-3"
             />
 
-            <p className="mt-6 font-lato text-white/75 leading-relaxed">
+            <p className="mt-6 font-lato text-white/75 leading-relaxed max-sm:mt-3 max-sm:text-sm">
               Our manufacturing facilities are equipped with precision-driven
               machinery and automation systems designed to support high-volume
               solar and wind energy production with consistent accuracy.
@@ -246,7 +249,8 @@ function Infrastructure() {
                 transition: { staggerChildren: 0.15, delayChildren: 0.2 },
               },
             }}
-            className="mt-20 grid md:grid-cols-3 gap-10"
+            className="mt-20 grid md:grid-cols-3 gap-10
+                 max-sm:mt-10 max-sm:grid-cols-1 max-sm:gap-5"
           >
             {[
               {
@@ -276,18 +280,25 @@ function Infrastructure() {
             shadow-[0_30px_80px_rgba(0,0,0,0.35)]
             hover:-translate-y-1.5
             transition-all duration-300
+            max-sm:p-5
           "
               >
                 {/* index */}
-                <div className="absolute top-6 right-6 text-accent/30 font-raleway text-3xl font-semibold">
+                <div
+                  className="absolute top-6 right-6 text-accent/30 font-raleway text-3xl font-semibold
+                          max-sm:top-3 max-sm:right-3 max-sm:text-2xl"
+                >
                   0{i + 1}
                 </div>
 
-                <h3 className="font-raleway text-lg font-semibold">
+                <h3 className="font-raleway text-lg font-semibold max-sm:text-base">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 font-lato text-white/70 leading-relaxed">
+                <p
+                  className="mt-4 font-lato text-white/70 leading-relaxed
+                        max-sm:mt-2 max-sm:text-sm"
+                >
                   {item.desc}
                 </p>
 
@@ -300,35 +311,35 @@ function Infrastructure() {
       </section>
 
       {/* Production Capacity */}
-      <section className="relative py-16 bg-[#F2F7F5] overflow-hidden">
+      <section className="relative py-16 bg-[#F2F7F5] overflow-hidden max-sm:py-10">
         {/* soft industrial wash */}
         <div className="absolute inset-0 bg-linear-to-r from-[#F2F7F5] via-[#E7F1EE] to-[#F2F7F5]" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 max-sm:px-4">
           {/* HEADER */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-3xl"
+            className="max-w-3xl max-sm:max-w-full"
           >
-            <h2 className="font-raleway text-3xl md:text-4xl font-semibold text-primary">
+            <h2 className="font-raleway text-3xl md:text-4xl font-semibold text-primary max-sm:text-2xl">
               High-Volume Production Capacity
             </h2>
 
-            <p className="mt-3 font-lato text-primary/70">
+            <p className="mt-3 font-lato text-primary/70 max-sm:mt-2 max-sm:text-sm">
               Designed for continuous output across large-scale renewable
               deployments.
             </p>
           </motion.div>
 
           {/* FLOW LINE */}
-          <div className="mt-12 relative">
+          <div className="mt-12 relative max-sm:mt-8">
             {/* main line */}
-            <div className="absolute top-5 left-0 right-0 h-px bg-primary/20" />
+            <div className="absolute top-5 left-0 right-0 h-px bg-primary/20 max-sm:hidden" />
 
-            <div className="grid md:grid-cols-3 gap-12 relative">
+            <div className="grid md:grid-cols-3 gap-12 relative max-sm:grid-cols-1 max-sm:gap-6">
               {[
                 {
                   label: "Scalable Lines",
@@ -352,13 +363,13 @@ function Infrastructure() {
                   className="relative"
                 >
                   {/* node */}
-                  <div className="w-3 h-3 rounded-full bg-accent mb-4" />
+                  <div className="w-3 h-3 rounded-full bg-accent mb-4 max-sm:mb-2" />
 
-                  <h4 className="font-raleway text-lg font-semibold text-primary">
+                  <h4 className="font-raleway text-lg font-semibold text-primary max-sm:text-base">
                     {item.label}
                   </h4>
 
-                  <p className="mt-2 text-sm font-lato text-primary/65 max-w-xs">
+                  <p className="mt-2 text-sm font-lato text-primary/65 max-w-xs max-sm:mt-1 max-sm:text-xs max-sm:max-w-none">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -369,27 +380,31 @@ function Infrastructure() {
       </section>
 
       {/* R&D Facilities */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-24 overflow-hidden max-sm:py-14">
         {/* BACKGROUND */}
         <div className="absolute inset-0">
           {/* base gradient */}
           <div className="absolute inset-0 bg-linear-to-br from-primary via-secondary to-secondary-dark" />
 
           {/* subtle depth glow */}
-          <div className="absolute -top-32 -right-32 w-105 h-105 bg-accent/10 rounded-full blur-[140px]" />
+          <div
+            className="absolute -top-32 -right-32 w-105 h-105 bg-accent/10 rounded-full blur-[140px]
+                    max-sm:-top-16 max-sm:-right-16 max-sm:w-56 max-sm:h-56 max-sm:blur-[90px]"
+          />
 
           {/* noise */}
           <div className="absolute inset-0 opacity-[0.025] bg-[url('/noise.png')]" />
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 max-sm:px-4">
           <motion.h2
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center font-raleway text-5xl font-semibold text-bg-primary"
+            className="text-center font-raleway text-5xl font-semibold text-bg-primary
+                 max-sm:text-3xl"
           >
             Research & Development Excellence
           </motion.h2>
@@ -400,14 +415,18 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-6 max-w-2xl mx-auto text-center font-lato text-bg-primary/70"
+            className="mt-6 max-w-2xl mx-auto text-center font-lato text-bg-primary/70
+                 max-sm:mt-3 max-sm:text-sm max-sm:max-w-full"
           >
             Advanced research infrastructure enabling precision engineering and
             next-generation solar and wind technologies.
           </motion.p>
 
           {/* INFOGRAPHIC BLOCKS */}
-          <div className="mt-20 flex flex-col md:flex-row justify-center gap-14">
+          <div
+            className="mt-20 flex flex-col md:flex-row justify-center gap-14
+                    max-sm:mt-10 max-sm:gap-8"
+          >
             {[
               {
                 title: "Efficiency Optimization",
@@ -432,27 +451,43 @@ function Infrastructure() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.12 }}
                 whileHover={{ y: -6 }}
-                className="relative w-75 group"
+                className="relative w-75 group max-sm:w-full"
               >
                 {/* offset frame — UNCHANGED */}
-                <div className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-accent/60" />
+                <div
+                  className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-accent/60
+                          max-sm:translate-x-2 max-sm:translate-y-2"
+                />
 
                 {/* main card */}
-                <div className="relative bg-bg-primary p-8 transition-shadow duration-300 group-hover:shadow-[0_18px_60px_rgba(11,43,38,0.35)]">
+                <div
+                  className="relative bg-bg-primary p-8
+                          transition-shadow duration-300
+                          group-hover:shadow-[0_18px_60px_rgba(11,43,38,0.35)]
+                          max-sm:p-6"
+                >
                   {/* icon */}
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 180, damping: 10 }}
-                    className="w-10 h-10 mb-6 rounded-full bg-accent/30 flex items-center justify-center"
+                    className="w-10 h-10 mb-6 rounded-full bg-accent/30
+                         flex items-center justify-center
+                         max-sm:mb-4"
                   >
                     <item.Icon size={18} className="text-[#a89557]" />
                   </motion.div>
 
-                  <h3 className="font-raleway text-lg font-semibold text-primary mb-3">
+                  <h3
+                    className="font-raleway text-lg font-semibold text-primary mb-3
+                           max-sm:text-base max-sm:mb-2"
+                  >
                     {item.title}
                   </h3>
 
-                  <p className="font-lato text-sm text-primary/70 leading-relaxed">
+                  <p
+                    className="font-lato text-sm text-primary/70 leading-relaxed
+                          max-sm:text-xs"
+                  >
                     {item.desc}
                   </p>
                 </div>
@@ -463,7 +498,7 @@ function Infrastructure() {
       </section>
 
       {/* Safety & Standards */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden max-sm:py-12">
         {/* LIGHT BACKGROUND — UNIQUE */}
         <div className="absolute inset-0">
           {/* soft mineral gradient */}
@@ -480,7 +515,10 @@ function Infrastructure() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div
+          className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center
+                  max-sm:px-4 max-sm:gap-10"
+        >
           {/* LEFT CONTENT */}
           <motion.div
             variants={fadeUp}
@@ -488,11 +526,17 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="font-raleway text-4xl font-semibold text-primary leading-11.5">
+            <h2
+              className="font-raleway text-4xl font-semibold text-primary leading-11.5
+                     max-sm:text-3xl max-sm:leading-tight"
+            >
               Safety, Quality & Global Standards
             </h2>
 
-            <p className="mt-6 max-w-md font-lato text-primary/70 leading-relaxed">
+            <p
+              className="mt-6 max-w-md font-lato text-primary/70 leading-relaxed
+                    max-sm:mt-3 max-sm:text-sm max-sm:max-w-full"
+            >
               Safety and compliance are embedded across our infrastructure,
               ensuring every product aligns with international quality,
               environmental, and operational standards.
@@ -500,7 +544,7 @@ function Infrastructure() {
           </motion.div>
 
           {/* RIGHT — STANDARDS LIST */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-sm:space-y-5">
             {[
               {
                 title: "ISO & Global Compliance",
@@ -521,16 +565,28 @@ function Infrastructure() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.12 }}
-                className="flex gap-6 items-start p-4 rounded-lg transition-transform duration-300 ease-out hover:scale-[1.03] hover:shadow-lg"
+                className="flex gap-6 items-start p-4 rounded-lg
+                     transition-transform duration-300 ease-out
+                     hover:scale-[1.03] hover:shadow-lg
+                     max-sm:gap-4 max-sm:p-3"
               >
                 {/* compliance marker */}
-                <span className="mt-2 w-3 h-3 border-2 border-accent rotate-45 shrink-0" />
+                <span
+                  className="mt-2 w-3 h-3 border-2 border-accent rotate-45 shrink-0
+                           max-sm:mt-1.5"
+                />
 
                 <div>
-                  <h4 className="font-raleway text-base font-semibold text-primary">
+                  <h4
+                    className="font-raleway text-base font-semibold text-primary
+                           max-sm:text-sm"
+                  >
                     {item.title}
                   </h4>
-                  <p className="mt-1 font-lato text-sm text-primary/65 leading-relaxed">
+                  <p
+                    className="mt-1 font-lato text-sm text-primary/65 leading-relaxed
+                          max-sm:text-xs max-sm:mt-0.5"
+                  >
                     {item.desc}
                   </p>
                 </div>

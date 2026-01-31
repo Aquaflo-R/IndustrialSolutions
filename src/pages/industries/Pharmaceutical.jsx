@@ -39,7 +39,7 @@ export default function PharmaceuticalIndustry() {
   return (
     <div className="bg-bg-primary text-primary font-lato">
       {/* HERO SECTION */}
-      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary mt-20">
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-primary via-secondary to-secondary pt-20">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
 
@@ -60,15 +60,6 @@ export default function PharmaceuticalIndustry() {
           </p>
         </motion.div>
       </section>
-
-      {/* PREMIUM ANIMATED DIVIDER */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="origin-left h-px bg-linear-to-r from-transparent via-secondary-dark to-transparent max-w-5xl mx-auto"
-      />
 
       {/* CONTENT SECTION */}
       <section

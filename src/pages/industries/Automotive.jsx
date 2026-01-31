@@ -38,10 +38,16 @@ export default function AutomotiveIndustry() {
 
   return (
     <div className="bg-bg-primary text-primary font-lato">
+      
       {/* HERO SECTION */}
       <section
-        className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-linear-to-br 
-        from-primary via-secondary to-secondary mt-20"
+        className="relative min-h-[75vh] flex items-center justify-center overflow-hidden
+             bg-linear-to-br from-primary via-secondary to-secondary
+             pt-20
+             max-sm:min-h-[46vh]
+             max-sm:pt-20
+             max-sm:pb-10
+             max-sm:items-start"
       >
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0 bg-[url('/images/solarauto.jpg')] bg-cover bg-center opacity-20" />
@@ -51,22 +57,28 @@ export default function AutomotiveIndustry() {
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="relative z-10 text-center px-6 max-w-3xl"
+          className="relative z-10 text-center px-6 max-w-3xl
+               max-sm:px-4 max-sm:mt-6"
         >
-          <h1 className="font-raleway text-5xl md:text-6xl font-bold text-bg-primary mb-6">
+          <h1
+            className="font-raleway text-5xl md:text-6xl font-bold text-bg-primary mb-6
+                 max-sm:text-3xl max-sm:mb-3"
+          >
             Automotive Industry
           </h1>
 
-          <p className="text-lg md:text-xl text-bg-primary/80 mb-10 leading-relaxed">
+          <p
+            className="text-lg md:text-xl text-bg-primary/80 mb-10 leading-relaxed
+                 max-sm:text-sm max-sm:mb-0"
+          >
             Clean, resilient and scalable renewable energy systems supporting
             next-generation automotive manufacturing.
           </p>
         </motion.div>
       </section>
-
       {/* CONTENT SECTION */}
       <section
-        className="relative py-28 overflow-hidden"
+        className="relative py-28 overflow-hidden max-sm:py-16"
         style={{
           background:
             "linear-gradient(135deg, #DAF1DE 0%, #EBE7D9 50%, #BEB69B 100%)",
@@ -75,7 +87,9 @@ export default function AutomotiveIndustry() {
         {/* VERY SOFT OVERLAY TOUCH */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(190,182,155,0.08),transparent_45%)]" />
 
-        <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <div
+          className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:px-4"
+        >
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -83,14 +97,14 @@ export default function AutomotiveIndustry() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-raleway text-5xl mb-4 font-bold text-primary">
+            <h2 className="font-raleway text-5xl mb-4 font-bold text-primary max-sm:text-3xl max-sm:mb-3">
               Industry Challenges
             </h2>
 
             {/* SMALL DESIGN TOUCH */}
-            <div className="w-12 h-1 bg-accent rounded-full mt-3 mb-6" />
+            <div className="w-12 h-1 bg-accent rounded-full mt-3 mb-6 max-sm:mb-4" />
 
-            <p className="font-lato text-secondary leading-relaxed max-w-md">
+            <p className="font-lato text-secondary leading-relaxed max-w-md max-sm:text-sm">
               Automotive manufacturing faces high energy demands, strict
               emission regulations, and power reliability challenges that impact
               operational efficiency.
@@ -103,45 +117,48 @@ export default function AutomotiveIndustry() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 max-sm:space-y-4"
           >
             {/* CARD 1 */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16">
-              <div className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16 max-sm:p-5 max-sm:pl-12">
+              <div
+                className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center
+                     max-sm:-left-3 max-sm:w-10 max-sm:h-10"
+              >
                 <Zap className="text-accent" size={22} />
               </div>
-              <h4 className="font-raleway font-semibold text-primary">
+              <h4 className="font-raleway font-semibold text-primary text-sm">
                 High Energy Consumption
               </h4>
-              <p className="text-sm text-secondary-dark">
+              <p className="text-xs text-secondary-dark mt-1">
                 Automotive plants require continuous power for robotics,
                 assembly lines, and testing operations.
               </p>
             </div>
 
             {/* CARD 2 */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16 ml-6">
-              <div className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16 ml-6 max-sm:ml-0 max-sm:p-5 max-sm:pl-12">
+              <div className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-secondary flex items-center justify-center max-sm:-left-3 max-sm:w-10 max-sm:h-10">
                 <Leaf className="text-accent" size={22} />
               </div>
-              <h4 className="font-raleway font-semibold text-primary">
+              <h4 className="font-raleway font-semibold text-primary text-sm">
                 Emission Reduction Pressure
               </h4>
-              <p className="text-sm text-secondary-dark">
+              <p className="text-xs text-secondary-dark mt-1">
                 Manufacturers must meet strict sustainability regulations and
                 global carbon reduction targets.
               </p>
             </div>
 
             {/* CARD 3 */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16 ml-12">
-              <div className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+            <div className="relative bg-white rounded-2xl shadow-lg p-6 pl-16 ml-12 max-sm:ml-0 max-sm:p-5 max-sm:pl-12">
+              <div className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center max-sm:-left-3 max-sm:w-10 max-sm:h-10">
                 <BatteryCharging className="text-accent" size={22} />
               </div>
-              <h4 className="font-raleway font-semibold text-primary">
+              <h4 className="font-raleway font-semibold text-primary text-sm">
                 Power Reliability Challenges
               </h4>
-              <p className="text-sm text-secondary-dark">
+              <p className="text-xs text-secondary-dark mt-1">
                 Automated production demands uninterrupted, stable energy to
                 prevent costly operational downtime.
               </p>
@@ -152,15 +169,20 @@ export default function AutomotiveIndustry() {
 
       <section
         className="relative py-28 overflow-hidden
-      bg-linear-to-b from-primary via-secondary to-primary"
+  bg-linear-to-b from-primary via-secondary to-primary
+  max-sm:py-16"
       >
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-6 max-sm:px-4">
           {/* SECTION HEADER */}
-          <div className="text-center mb-24">
-            <h2 className="font-raleway text-5xl md:text-5xl font-bold tracking-wider text-bg-primary">
+          <div className="text-center mb-24 max-sm:mb-14">
+            <h2
+              className="font-raleway text-5xl md:text-5xl font-bold tracking-wider text-bg-primary
+        max-sm:text-3xl"
+            >
               Solutions Offered
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto font-lato text-accent">
+
+            <p className="mt-4 max-w-2xl mx-auto font-lato text-accent max-sm:text-sm max-sm:mt-3 max-sm:px-2">
               End-to-end renewable energy solutions engineered as an integrated,
               system-driven infrastructure.
             </p>
@@ -194,7 +216,6 @@ export default function AutomotiveIndustry() {
               />
             </svg>
 
-            {/* SOLAR */}
             <Card
               Icon={Sun}
               title="Solar Power Systems"
@@ -202,7 +223,6 @@ export default function AutomotiveIndustry() {
               desc="High-efficiency solar solutions engineered for industrial and commercial energy demands."
             />
 
-            {/* WIND */}
             <Card
               Icon={Wind}
               title="Wind Energy Integration"
@@ -211,7 +231,6 @@ export default function AutomotiveIndustry() {
               desc="Scalable wind components designed for consistent and reliable power generation."
             />
 
-            {/* STORAGE */}
             <Card
               Icon={BatteryCharging}
               title="Energy Storage Solutions"
@@ -221,7 +240,7 @@ export default function AutomotiveIndustry() {
           </div>
 
           {/* MOBILE STACK */}
-          <div className="md:hidden flex flex-col gap-16">
+          <div className="md:hidden flex flex-col gap-12">
             {[
               {
                 title: "Solar Power Systems",
@@ -239,20 +258,25 @@ export default function AutomotiveIndustry() {
                 Icon: BatteryCharging,
               },
             ].map(({ title, desc, Icon }, i) => (
-              <div key={i} className="relative">
+              <div key={i} className="relative px-2">
                 <div className="absolute inset-0 -skew-x-6 border border-accent/60" />
-                <div className="relative bg-bg-primary p-8 -skew-x-6">
+
+                <div className="relative bg-bg-primary p-6 -skew-x-6">
                   <div className="skew-x-6">
-                    <Icon className="text-primary mb-5" size={32} />
-                    <h3 className="font-raleway uppercase font-semibold text-primary mb-2">
+                    <Icon className="text-primary mb-4" size={28} />
+
+                    <h3 className="font-raleway uppercase font-semibold text-primary mb-2 text-sm">
                       {title}
                     </h3>
-                    <p className="font-lato text-sm text-secondary">{desc}</p>
+
+                    <p className="font-lato text-xs leading-relaxed text-secondary">
+                      {desc}
+                    </p>
                   </div>
                 </div>
 
                 {i !== 2 && (
-                  <div className="absolute left-1/2 -bottom-12 h-12 w-0.5 bg-accent" />
+                  <div className="absolute left-1/2 -bottom-8 h-8 w-0.5 bg-accent" />
                 )}
               </div>
             ))}
@@ -260,29 +284,25 @@ export default function AutomotiveIndustry() {
         </div>
       </section>
 
-      <section className="relative py-24 overflow-hidden">
-         
-        {/* Gradient Background */}    
-        <div className="absolute inset-0 bg-linear-to-br from-[#E0F7F1] to-[#F7FFF5] z-0" />    
+      <section className="relative py-24 max-sm:py-14 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-[#E0F7F1] to-[#F7FFF5] z-0" />
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative max-w-7xl mx-auto px-6 text-primary z-20"
+          className="relative max-w-7xl mx-auto px-6 max-sm:px-4 text-primary z-20"
         >
-              
-          {/* Section Heading */}    
-          <div className="text-center mb-20">
-                
-            <h2 className="font-raleway text-5xl font-bold">
-                  
-              Related Products    
-            </h2>    
-          </div>    
-          {/* Cards */}    
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-                
+          {/* Section Heading */}
+          <div className="text-center mb-20 max-sm:mb-12">
+            <h2 className="font-raleway text-5xl font-bold max-sm:text-3xl">
+              Related Products
+            </h2>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 max-sm:gap-10">
             {products.map((item, i) => (
               <motion.div
                 key={i}
@@ -294,14 +314,14 @@ export default function AutomotiveIndustry() {
                   delay: i * 0.15,
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
-                className="relative"
+                className="relative "
               >
-                    
-                {/* Static Offset Border */}    
-                <div className="absolute -top-3 -left-3 w-[94%] h-[94%] border-4 border-accent z-0 rounded-xl" />    
-                {/* Card with Motion */}    
+                {/* Static Offset Border */}
+                <div className="absolute -top-3 -left-3 w-[94%] h-[94%] border-4 border-accent z-0 rounded-xl max-sm:-top-2 max-sm:-left-2 max-sm:w-[96%] max-sm:h-[96%]" />
+
+                {/* Card with Motion */}
                 <motion.div
-                  className="relative bg-white z-10 p-10 shadow-xl rounded-xl overflow-hidden cursor-pointer"
+                  className="relative bg-white z-10 p-10 max-sm:p-6 shadow-xl rounded-xl overflow-hidden cursor-pointer"
                   whileHover={{
                     scale: 1.03,
                     y: -4,
@@ -309,31 +329,30 @@ export default function AutomotiveIndustry() {
                   }}
                   transition={{ type: "spring", stiffness: 120, damping: 14 }}
                 >
-                      
-                  {/* Card Content */}    
-                  <h3 className="font-raleway font-semibold text-xl mb-4 text-primary">
-                        
-                    {item.title}    
-                  </h3>    
-                  <p className="font-lato text-sm text-secondary leading-relaxed">
-                        
-                    {item.description}    
-                  </p>    
-                  {/* Optional subtle hover overlay */}    
+                  {/* Card Content */}
+                  <h3 className="font-raleway font-semibold text-xl mb-4 text-primary max-sm:text-lg max-sm:mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="font-lato text-sm text-secondary leading-relaxed max-sm:text-xs">
+                    {item.description}
+                  </p>
+
+                  {/* Optional subtle hover overlay */}
                   <motion.div
                     className="absolute inset-0 bg-accent opacity-0"
                     whileHover={{ opacity: 0.03 }}
                     transition={{ duration: 0.3 }}
                   />
-                </motion.div>    
+                </motion.div>
               </motion.div>
             ))}
           </div>
+
           {/* BACK BUTTON */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center max-sm:mt-12">
             <Link
               to="/industries"
-              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6"
+              className="inline-block px-8 py-3 bg-primary text-accent font-semibold rounded-xl shadow-lg hover:bg-accent/80 hover:text-primary transition-colors duration-300 mt-6 max-sm:px-6 max-sm:py-2 max-sm:text-sm"
             >
               BACK
             </Link>
@@ -344,7 +363,7 @@ export default function AutomotiveIndustry() {
   );
 }
 
-/* Inline Card (same file) */
+/* Inline Card  */
 function Card({ Icon, title, desc, delay, offset }) {
   return (
     <motion.div
