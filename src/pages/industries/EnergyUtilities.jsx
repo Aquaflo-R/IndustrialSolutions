@@ -151,7 +151,7 @@ export default function EnergyUtilitiesIndustry() {
               <div
                 className="absolute -left-6 top-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center max-sm:-left-3 max-sm:w-10 max-sm:h-10"
               >
-                <BatteryCharging className="text-accent" size={22} />
+                <Battery className="text-accent" size={22} />
               </div>
               <h4 className="font-raleway font-semibold text-primary text-sm">
                 Reliable Energy Storage

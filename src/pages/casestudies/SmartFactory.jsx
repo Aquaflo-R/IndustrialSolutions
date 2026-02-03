@@ -80,7 +80,7 @@ const SmartFactoryAutomation = () => {
           <div className="grid lg:grid-cols-12 gap-12 max-sm:gap-8 items-start relative z-10">
             {/* LEFT TITLE */}
             <div className="lg:col-span-4 flex flex-col justify-center max-sm:items-start">
-              {/* Icon instead of vertical span */}
+              {/* Icon */}
               <Layers className="h-8 w-8 text-accent mb-4 max-sm:h-6 max-sm:w-6" />
 
               <h2 className="text-4xl font-bold text-primary leading-tight max-sm:text-3xl">

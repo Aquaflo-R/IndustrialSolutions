@@ -165,9 +165,7 @@ export default function OilGasIndustry() {
 
       {/* SOLUTIONS OFFERED SECTION */}
      <section
-        className="relative py-28 overflow-hidden
-  bg-linear-to-b from-primary via-secondary to-primary
-  max-sm:py-16"
+        className="relative py-28 overflow-hidden  bg-linear-to-b from-primary via-secondary to-primary max-sm:py-16"
       >
         <div className="relative max-w-7xl mx-auto px-6 max-sm:px-4">
           {/* SECTION HEADER */}

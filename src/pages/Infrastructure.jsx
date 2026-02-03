@@ -16,8 +16,7 @@ function Infrastructure() {
           <img
             src="images/infrastructure-bg.jpg"
             alt="Renewable energy manufacturing facility"
-            className="w-full h-full object-cover scale-110
-                 max-sm:scale-100 max-sm:object-top"
+            className="w-full h-full object-cover scale-110 max-sm:scale-100 max-sm:object-top"
           />
           <div className="absolute inset-0 bg-linear-to-b from-primary/90 via-primary/75 to-primary/90" />
         </div>
@@ -25,10 +24,7 @@ function Infrastructure() {
         {/* WIND TURBINE ABSTRACT */}
         <motion.svg
           viewBox="0 0 600 600"
-          className="absolute right-[-15%] top-1/2 -translate-y-1/2
-               w-160 h-160
-               pointer-events-none z-0
-               max-sm:w-40 max-sm:h-40 max-sm:right-[-5%] max-sm:top-[40%] max-sm:-translate-y-1/2"
+          className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-160 h-160 pointer-events-none z-0 max-sm:w-40 max-sm:h-40 max-sm:right-[-5%] max-sm:top-[40%] max-sm:-translate-y-1/2"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
         >
@@ -48,10 +44,7 @@ function Infrastructure() {
         {/* SECOND WIND TURBINE – LEFT BOTTOM */}
         <motion.svg
           viewBox="0 0 600 600"
-          className="absolute left-[-12%] bottom-[-12%]
-               w-104 h-104
-               pointer-events-none z-0
-               max-sm:w-32 max-sm:h-32 max-sm:left-[-5%] max-sm:bottom-[-5%]"
+          className="absolute left-[-12%] bottom-[-12%] w-104 h-104 pointer-events-none z-0 max-sm:w-32 max-sm:h-32 max-sm:left-[-5%] max-sm:bottom-[-5%]"
           animate={{ rotate: -360 }}
           transition={{ repeat: Infinity, duration: 90, ease: "linear" }}
         >
@@ -74,8 +67,7 @@ function Infrastructure() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="relative font-raleway text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight
-                 max-sm:text-3xl max-sm:leading-snug"
+            className="relative font-raleway text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight max-sm:text-3xl max-sm:leading-snug"
           >
             <span className="relative z-10 text-bg-primary">
               Built for Scale.
@@ -94,8 +86,7 @@ function Infrastructure() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-8 mx-auto max-w-3xl font-lato text-md md:text-lg text-bg-primary/85
-                 max-sm:text-sm max-sm:mt-6"
+            className="mt-8 mx-auto max-w-3xl font-lato text-md md:text-lg text-bg-primary/85 max-sm:text-sm max-sm:mt-6"
           >
             Our infrastructure forms the backbone of large-scale solar and wind
             energy manufacturing — delivering performance, precision, and
@@ -120,7 +111,7 @@ function Infrastructure() {
           {/* secondary depth glow */}
           <div
             className="absolute bottom-0 right-0 w-105 h-105 bg-secondary/10 rounded-full blur-[140px]
-                 max-sm:w-44 max-sm:h-44 max-sm:blur-[80px] max-sm:bottom-[-16px] max-sm:right-[-8px]"
+                 max-sm:w-44 max-sm:h-44 max-sm:blur-[80px] max-sm:-bottom-4 max-sm:-right-2"
           />
         </div>
 
@@ -274,14 +265,7 @@ function Infrastructure() {
                 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className="
-            relative p-8 rounded-2xl
-            bg-white/5 backdrop-blur
-            border border-white/10
-            shadow-[0_30px_80px_rgba(0,0,0,0.35)]
-            hover:-translate-y-1.5
-            transition-all duration-300
-            max-sm:p-5
-          "
+            relative p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:-translate-y-1.5 transition-all duration-300 max-sm:p-5"
               >
                 {/* index */}
                 <div
@@ -391,9 +375,6 @@ function Infrastructure() {
             className="absolute -top-32 -right-32 w-105 h-105 bg-accent/10 rounded-full blur-[140px]
                     max-sm:-top-16 max-sm:-right-16 max-sm:w-56 max-sm:h-56 max-sm:blur-[90px]"
           />
-
-          {/* noise */}
-          <div className="absolute inset-0 opacity-[0.025] bg-[url('/noise.png')]" />
         </div>
 
         {/* CONTENT */}
@@ -403,8 +384,7 @@ function Infrastructure() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center font-raleway text-5xl font-semibold text-bg-primary
-                 max-sm:text-3xl"
+            className="text-center font-raleway text-5xl font-semibold text-bg-primary max-sm:text-3xl"
           >
             Research & Development Excellence
           </motion.h2>
@@ -415,8 +395,7 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-6 max-w-2xl mx-auto text-center font-lato text-bg-primary/70
-                 max-sm:mt-3 max-sm:text-sm max-sm:max-w-full"
+            className="mt-6 max-w-2xl mx-auto text-center font-lato text-bg-primary/70 max-sm:mt-3 max-sm:text-sm max-sm:max-w-full"
           >
             Advanced research infrastructure enabling precision engineering and
             next-generation solar and wind technologies.
@@ -453,41 +432,25 @@ function Infrastructure() {
                 whileHover={{ y: -6 }}
                 className="relative w-75 group max-sm:w-full"
               >
-                {/* offset frame — UNCHANGED */}
-                <div
-                  className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-accent/60
-                          max-sm:translate-x-2 max-sm:translate-y-2"
-                />
+                {/* offset frame */}
+                <div className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-accent/60 max-sm:translate-x-2.5 max-sm:translate-y-2.5" />
 
                 {/* main card */}
-                <div
-                  className="relative bg-bg-primary p-8
-                          transition-shadow duration-300
-                          group-hover:shadow-[0_18px_60px_rgba(11,43,38,0.35)]
-                          max-sm:p-6"
-                >
+                <div className="relative bg-bg-primary p-8 transition-shadow duration-300 group-hover:shadow-[0_18px_60px_rgba(11,43,38,0.35)] max-sm:p-4">
                   {/* icon */}
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 180, damping: 10 }}
-                    className="w-10 h-10 mb-6 rounded-full bg-accent/30
-                         flex items-center justify-center
-                         max-sm:mb-4"
+                    className="w-10 h-10 mb-6 rounded-full bg-accent/30 flex items-center justify-center max-sm:mb-4"
                   >
                     <item.Icon size={18} className="text-[#a89557]" />
                   </motion.div>
 
-                  <h3
-                    className="font-raleway text-lg font-semibold text-primary mb-3
-                           max-sm:text-base max-sm:mb-2"
-                  >
+                  <h3 className="font-raleway text-lg font-semibold text-primary mb-3 max-sm:text-base max-sm:mb-2">
                     {item.title}
                   </h3>
 
-                  <p
-                    className="font-lato text-sm text-primary/70 leading-relaxed
-                          max-sm:text-xs"
-                  >
+                  <p className="font-lato text-sm text-primary/70 leading-relaxed max-sm:text-xs">
                     {item.desc}
                   </p>
                 </div>
@@ -499,7 +462,7 @@ function Infrastructure() {
 
       {/* Safety & Standards */}
       <section className="relative py-20 overflow-hidden max-sm:py-12">
-        {/* LIGHT BACKGROUND — UNIQUE */}
+        {/* LIGHT BACKGROUND */}
         <div className="absolute inset-0">
           {/* soft mineral gradient */}
           <div className="absolute inset-0 bg-linear-to-br from-[#F4FAF7] via-[#E6F3EC] to-bg-primary" />
@@ -509,7 +472,7 @@ function Infrastructure() {
             className="absolute inset-0 opacity-[0.04]"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(11,43,38,0.12) 0px, rgba(11,43,38,0.12) 1px, transparent 1px, transparent 14px)",
+                "repeating-linear-gradient(135deg, rgba(11, 43, 38, 0.30) 0px, rgba(11, 43, 38, 0.30) 1px, transparent 1px, transparent 14px)",
             }}
           />
         </div>
@@ -532,6 +495,15 @@ function Infrastructure() {
             >
               Safety, Quality & Global Standards
             </h2>
+
+            {/* animated divider */}
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-6 h-0.75 bg-accent max-sm:mt-3"
+            />
 
             <p
               className="mt-6 max-w-md font-lato text-primary/70 leading-relaxed

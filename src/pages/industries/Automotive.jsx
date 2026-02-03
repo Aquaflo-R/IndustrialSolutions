@@ -168,9 +168,7 @@ export default function AutomotiveIndustry() {
       </section>
 
       <section
-        className="relative py-28 overflow-hidden
-  bg-linear-to-b from-primary via-secondary to-primary
-  max-sm:py-16"
+        className="relative py-28 overflow-hidden bg-linear-to-b from-primary via-secondary to-primary max-sm:py-16"
       >
         <div className="relative max-w-7xl mx-auto px-6 max-sm:px-4">
           {/* SECTION HEADER */}
@@ -337,7 +335,7 @@ export default function AutomotiveIndustry() {
                     {item.description}
                   </p>
 
-                  {/* Optional subtle hover overlay */}
+                  {/*subtle hover overlay */}
                   <motion.div
                     className="absolute inset-0 bg-accent opacity-0"
                     whileHover={{ opacity: 0.03 }}
