@@ -10,7 +10,7 @@ function Infrastructure() {
   return (
     <main className="bg-bg-primary text-primary overflow-hidden">
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary pt-20">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary pt-10">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <img
@@ -127,7 +127,7 @@ function Infrastructure() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="font-raleway text-4xl font-semibold text-primary max-sm:text-3xl">
+            <h2 className="font-raleway text-[44px] font-bold text-primary max-sm:text-3xl leading-14">
               World-Class Manufacturing Facilities
             </h2>
 
@@ -295,7 +295,7 @@ function Infrastructure() {
       </section>
 
       {/* Production Capacity */}
-      <section className="relative py-16 bg-[#F2F7F5] overflow-hidden max-sm:py-10">
+      <section className="relative py-20 bg-[#F2F7F5] overflow-hidden max-sm:py-10">
         {/* soft industrial wash */}
         <div className="absolute inset-0 bg-linear-to-r from-[#F2F7F5] via-[#E7F1EE] to-[#F2F7F5]" />
 
@@ -308,7 +308,7 @@ function Infrastructure() {
             viewport={{ once: true }}
             className="max-w-3xl max-sm:max-w-full"
           >
-            <h2 className="font-raleway text-3xl md:text-4xl font-semibold text-primary max-sm:text-2xl">
+            <h2 className="font-raleway text-4xl md:text-4xl font-semibold text-primary max-sm:text-2xl">
               High-Volume Production Capacity
             </h2>
 
@@ -490,8 +490,7 @@ function Infrastructure() {
             viewport={{ once: true }}
           >
             <h2
-              className="font-raleway text-4xl font-semibold text-primary leading-11.5
-                     max-sm:text-3xl max-sm:leading-tight"
+              className="font-raleway text-4xl font-bold text-primary leading-11.5 max-sm:text-3xl max-sm:leading-tight"
             >
               Safety, Quality & Global Standards
             </h2>

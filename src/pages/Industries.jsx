@@ -92,6 +92,13 @@ export default function Industries() {
               <Link
                 to="/industries"
                 className=" px-6 py-3 rounded-full border border-accent bg-primary text-white font-semibold transition hover:bg-accent hover:text-primary"
+                onClick={() =>
+                  setTimeout(() => {
+                    document
+                      .getElementById("industry")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }, 100)
+                }
               >
                 Explore Industries
               </Link>
@@ -101,7 +108,7 @@ export default function Industries() {
       </section>
 
       {/*Overview*/}
-      <section className="relative overflow-hidden bg-[#F6FBF9] py-20  md:py-24 pb-28 md:pb-36 font-lato">
+      <section className="relative overflow-hidden bg-[#F6FBF9] py-20  md:py-24 pb-28 md:pb-36 font-lato max-sm:py-12">
         {/* background glows */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-linear-to-br from-[#9FE870]/40 to-[#4CAF50]/30 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tr from-primary/20 to-secondary/20 rounded-full blur-3xl" />
@@ -193,7 +200,10 @@ export default function Industries() {
       </section>
 
       {/*Industries*/}
-      <section className="relative py-16 md:py-20 bg-linear-to-b from-bg-primary to-white">
+      <section
+        id="industry"
+        className="relative py-16 md:py-20 bg-linear-to-b from-bg-primary to-white"
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-2">
             Driving Industries with Clean Energy
