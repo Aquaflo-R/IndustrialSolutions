@@ -26,7 +26,6 @@ import RenewableAutomotive from "./pages/casestudies/RenewableAutomotive";
 import SmartFactory from "./pages/casestudies/SmartFactory";
 import SustainableManufacturing from "./pages/casestudies/SustainableManufacturing";
 
-
 function App() {
   return (
     <HashRouter>
@@ -36,7 +35,7 @@ function App() {
         {/* Core Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-      
+
         {/* Products */}
         <Route path="/products/all" element={<Allproducts />} />
         <Route path="/products/category/:slug" element={<ProductCategory />} />
@@ -46,15 +45,27 @@ function App() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/industries/Automotive" element={<Automotive />} />
         <Route path="/industries/Pharmaceutical" element={<Pharmaceutical />} />
-        <Route path="/industries/EnergyUtilities" element={<EnergyUtilities />} />
-        <Route path="/industries/LogisticsWarehouse" element={<LogisticsWarehouse />} />
+        <Route
+          path="/industries/EnergyUtilities"
+          element={<EnergyUtilities />}
+        />
+        <Route
+          path="/industries/LogisticsWarehouse"
+          element={<LogisticsWarehouse />}
+        />
         <Route path="/industries/OilGas" element={<OilGas />} />
         <Route path="/industries/Manufacturing" element={<Manufacturing />} />
 
         {/* Case Studies */}
-        <Route path="/CaseStudies/RenewableAutomotive" element={<RenewableAutomotive />} />
+        <Route
+          path="/CaseStudies/RenewableAutomotive"
+          element={<RenewableAutomotive />}
+        />
         <Route path="/CaseStudies/SmartFactory" element={<SmartFactory />} />
-        <Route path="/CaseStudies/SustainableManufacturing" element={<SustainableManufacturing />} />
+        <Route
+          path="/CaseStudies/SustainableManufacturing"
+          element={<SustainableManufacturing />}
+        />
 
         {/* Other Pages */}
         <Route path="/process" element={<Process />} />

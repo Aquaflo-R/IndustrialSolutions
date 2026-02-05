@@ -32,10 +32,10 @@ function AllProducts() {
   };
 
   return (
-    <div className="pt-24 p-2">
-      <div className="relative h-[25vw] w-full bg-[url(./assets/images/Allproduct.png)] bg-cover bg-center">
-        <div className="absolute top-0 left-0 bg-black/30 h-full w-full z-10"></div>
-        <div className="relative flex flex-col items-center justify-center pt-25 z-200">
+    <div className="px-2">
+      <div className="relative h-[35vw] w-full bg-[url(./assets/images/Allproduct.png)] bg-cover bg-center ">
+        <div className="absolute top-0 left-0 bg-black/50 h-full w-full z-10"></div>
+        <div className="relative flex flex-col items-center justify-center pt-55 z-200">
           <h1 className="text-white font-primary text-5xl font-semibold mb-3 ">
             All Products
           </h1>

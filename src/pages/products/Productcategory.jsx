@@ -35,9 +35,9 @@ function ProductCategory() {
   }
 
   return (
-    <div className="pt-25 px-2">
+    <div className=" px-2">
       <div
-        className="relative bg-cover bg-bottom h-[45vh] w-full flex items-center justify-center"
+        className="relative bg-cover bg-bottom h-[70vh] w-full flex items-center justify-center"
         style={{
           backgroundImage: `url(${category.heroimage})`,
         }}
