@@ -17,7 +17,7 @@ const Process = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 90%)
+        radial-gradient(170% 125% at 50% 100%, #ffffff 30%, #0B2B26 80%)
       `,
             backgroundSize: "100% 100%",
           }}
