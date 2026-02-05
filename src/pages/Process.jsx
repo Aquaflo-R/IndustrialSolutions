@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import {
   MoveRight,
@@ -23,42 +24,74 @@ const Process = () => {
           }}
         />
         <div className="relative z-10 flex flex-col text-center h-screen items-center justify-center">
-          <h1 className="text-primary font-primary font-bold text-8xl leading-22">
+          <motion.h1
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "linear" }}
+            className="text-primary font-primary font-bold text-8xl leading-22"
+          >
             Process
-          </h1>
+          </motion.h1>
 
-          <p className="w-[60vw] text-secondary font-medium text-xm">
+          <motion.p
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5, ease: "linear" }}
+            className="w-[60vw] text-secondary font-medium text-xm"
+          >
             We follow a structured and transparent process to deliver reliable,
             efficient, and scalable solutions. Each stage is designed to ensure
             quality execution, technical accuracy, and long-term performance
             across all projects.
-          </p>
-          <button className="bg-primary px-5 text-2xl text-white py-2 rounded-3xl mt-5 hover:-translate-y-1 transition">
+          </motion.p>
+          <motion.button
+            initial={{ y: -5, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 1, delay: 0.5, ease: "linear" }}
+            className="bg-primary px-5 text-2xl text-white py-2 rounded-3xl mt-5 "
+          >
             Contact us
-          </button>
+          </motion.button>
         </div>
       </div>
       <div id="SubsectionHero" className="w-full h-[30vw] max-lg:h-fit ">
         <div className="max-lg:flex-col max-lg:gap-0 max-lg:w-[100%] w-full h-full flex items-center justify-center gap-10">
           <div className="w-[40%] max-lg:w-full p-2">
-            <h1 className="text-primary font-primary mb-2 font-bold text-2xl flex items-center gap-2">
-              <h1>Who We are </h1>
+            <motion.h1
+              initial={{ x: -40, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-primary font-primary mb-2 font-bold text-2xl flex items-center gap-2"
+            >
+              <span>Who We are</span>
               <MoveRight size={30} strokeWidth={2} />
-            </h1>
-            <h2 className="text-secondary font-secondary text-3xl max-lg:text-justify max-lg:p-4">
+            </motion.h1>
+            <motion.h2
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-secondary font-secondary text-3xl max-lg:text-justify max-lg:p-4"
+            >
               Our team combines engineerin g expertise with practical industry
               experience to deliver systems that perform consistently in
               real-world conditions.
-            </h2>
+            </motion.h2>
           </div>
           <div className="w-[50%] max-lg:w-full">
-            <p className="font-primary text-2xl text-primary max-lg:text-justify max-lg:p-5">
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="font-primary text-2xl text-primary max-lg:text-justify max-lg:p-5"
+            >
               We are a technology-driven solutions provider delivering reliable
               energy and industrial systems for modern infrastructure. With a
               strong focus on quality, performance, and long-term reliability,
               we partner with businesses to design and implement solutions that
               support operational efficiency and sustainable growth.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
@@ -66,18 +99,33 @@ const Process = () => {
         <div className="relative min-h-screen bg-[radial-gradient(circle_at_20%_20%,#c7d2fe,transparent_60%),radial-gradient(circle_at_80%_80%,#fbcfe8,transparent_60%)] ">
           <div className="max-lg:flex-col flex gap-10 p-10 ">
             <div className="static lg:sticky top-20 h-[15vw] w-[50%] pt-5 max-lg:w-full">
-              <h2 className="font-primary text-4xl font-bold text-primary mb-5">
+              <motion.h2
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="font-primary text-4xl font-bold text-primary mb-5"
+              >
                 Our Approach
-              </h2>
-              <p className="font-secondary text-xl w-[40vw] pb-5 max-lg:w-full">
+              </motion.h2>
+              <motion.p
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="font-secondary text-xl w-[40vw] pb-5 max-lg:w-full"
+              >
                 We believe successful projects are built on clarity, precision,
                 and long-term thinking. Our approach focuses on delivering
                 dependable solutions that perform consistently, adapt to
                 changing needs, and create measurable value for our clients.
-              </p>
+              </motion.p>
             </div>
             <div className="space-y-5  w-[50%] h-full max-lg:w-full mt-60 lg:mt-0">
-              <div className="flex gap-5 mb-7">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="flex gap-5 mb-7"
+              >
                 <ChartGantt size={60} className="-mt-3" />
                 <div className="">
                   <h1 className="text-primary font-primary text-2xl font-bold mt-1 pb-2">
@@ -88,9 +136,14 @@ const Process = () => {
                     expectations from the beginning to ensure smooth execution.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex gap-5 mb-5">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1 }}
+                className="flex gap-5 mb-5"
+              >
                 <ReplaceAll size={60} className="-mt-3" />
                 <div className="">
                   <h1 className="text-primary font-primary text-2xl font-bold mt-1 pb-2">
@@ -101,9 +154,14 @@ const Process = () => {
                     standards, and strict quality control
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex gap-5 mb-5">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+                className="flex gap-5 mb-5"
+              >
                 <PaintbrushVertical size={60} className="-mt-3" />
                 <div className="">
                   <h1 className="text-primary font-primary text-2xl font-bold">
@@ -114,9 +172,14 @@ const Process = () => {
                     under real-world operating conditions.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex gap-5 mb-5">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.4 }}
+                className="flex gap-5 mb-5"
+              >
                 <Ratio size={60} className="-mt-3" />
                 <div className="">
                   <h1 className="text-primary font-primary text-2xl font-bold">
@@ -127,9 +190,14 @@ const Process = () => {
                     changing business and energy needs.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex gap-5 mb-5">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.6 }}
+                className="flex gap-5 mb-5"
+              >
                 <ScanEye size={60} className="-mt-3" />
                 <div className="">
                   <h1 className="text-primary font-primary text-2xl font-bold">
@@ -140,19 +208,25 @@ const Process = () => {
                     expectations from the beginning to ensure smooth execution.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
       <div className="w-full h-[40vw] flex max-lg:flex-col max-lg:h-fit">
         <div className=" w-[50%] relative max-lg:w-full max-lg:h-[90vw]">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
             className="absolute w-[30vw] top-20 rounded-2xl left-20 object-cover max-lg:w-[55vw] max-lg:top-10 max-lg:left-10"
             src="https://images.unsplash.com/photo-1758435342050-bf9cd198385f?q=80&w=812&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 1.5 }}
             className="absolute w-[30vw] h-[20vw] top-60  rounded-2xl left-50 object-cover max-lg:w-[55vw] max-lg:top-40 max-lg:left-30 max-lg:h-[40vw]"
             src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
